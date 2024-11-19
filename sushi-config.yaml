@@ -2,12 +2,12 @@
 # ───────────────────────────────────────────────────
 # the id should be lowercase made up of "ihe." + {domain acronym} + "." + {profile acronym/short-name}
 # e.g. ihe.iti.mhds, or ihe.iti.basicaudit
-id: ihe.domain.profile
-canonical: https://profiles.ihe.net/Domain/Profile
+id: ihe.qrph.madx
+canonical: https://profiles.ihe.net/QRPH/mADX
 version: 0.0.1-current
-name: IHE_Domain_Profile
-title: "spelled out name of the IHE Profile"
-description: put the short description of the profile here. it should explain what problem is being solved
+name: IHE_QRPH_mADX
+title: "Mobile Aggregate Data Exchange"
+description: The primary purpose of the mADX Profile is to provide an alternative for the exchange and management of the metadata required for routine reporting by replacing the use of SDMX with HL7 FHIR. This specification profiles HL7 FHIR to define an mADX Measure to normatively describe the structure of routine aggregate data reports as an mADX message.
 releaseLabel: ci-build
 #releaseLabel: ballot
 #releaseLabel: trial-use
@@ -16,14 +16,14 @@ releaseLabel: ci-build
 status: draft
 publisher:
   ## Find your domain contact on the https://www.ihe.net/ihe_domains page
-  - name: IHE IT Infrastructure Technical Committee
-  - url: https://www.ihe.net/ihe_domains/it_infrastructure/
-  - email: iti@ihe.net
+  - name: IHE QRPH Technical Committee
+  - url: https://www.ihe.net/ihe_domains/quality_research_and_public_health/
+  - email: qrph@ihe.net
 contact:
-  - name: IHE IT Infrastructure Technical Committee
+  - name: IHE QRPH Technical Committee
     telecom:
       - system: email
-        value: iti@ihe.net
+        value: qrph@ihe.net
 license:  CC-BY-4.0
 fhirVersion: 4.0.1
 jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#001'
