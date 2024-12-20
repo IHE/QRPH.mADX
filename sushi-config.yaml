@@ -7,7 +7,7 @@ canonical: https://profiles.ihe.net/QRPH/mADX
 version: 0.0.1-current
 name: IHE_QRPH_mADX
 title: "Mobile Aggregate Data Exchange"
-description: The primary purpose of the mADX Profile is to provide an alternative for the exchange and management of the metadata required for routine reporting by replacing the use of SDMX with HL7 FHIR. This specification profiles HL7 FHIR to define an mADX Measure to normatively describe the structure of routine aggregate data reports as an mADX message.
+description: The Mobile Aggregate Data Exchange (mADX) Profile supports interoperable public health reporting of aggregate health data. These most typically take the form of routine reports (weekly, monthly, quarterly etc.) from a health facility to some administrative jurisdiction such as a health district, though there are numerous other use cases such as international reporting and community health worker reporting.
 releaseLabel: ci-build
 #releaseLabel: ballot
 #releaseLabel: trial-use
@@ -57,44 +57,53 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
 pages:
 # itemize here each narrative page. Include assigned section numbers when appropriate. The order they appear here is the order they will appear in the TOC and on the next/prev navigation.
   index.md:
-    title: ToDo Home
+    title: Mobile Aggregate Data Exchange (mADX)
     generation: markdown
   volume-1.md:
-    title: 1:XX ToDo Volume 1
+    title: 1:06 Mobile Aggregate Data Exchange (mADX) Volume 1
     generation: markdown
-  domain-YY.md:
-    title: 2:3.YY Transaction one [Domain-YY]
+  QRPH-58.md:
+    title: 2:3.58 Send Aggregate Report [QRPH-58]
     generation: markdown
-  domain-ZZ.md:
-    title: 3:?.ZZ Content one [Domain-ZZ]
+  QRPH-59.md:
+    title: 2:3.59 Retrieve Aggregate Report Definition [QRPH-59]
+    generation: markdown
+  volume-3.md:
+    title: 3:06 Mobile Aggregate Data Exchange (mADX) Volume 3
+    generation: markdown
+  volume-4.md:
+    title: 4:06 Mobile Aggregate Data Exchange (mADX) Volume 4
     generation: markdown
   testplan.md:
-    title: "Test Plan"
+    title: mADX Test Plan
     generation: markdown
   other.md:
     title: Changes to Other IHE Specifications
     generation: markdown
   download.md:
-    title: "Download and Analysis"
+    title: Download and Analysis
     generation: markdown
   issues.md:
-    title: Significant Changes and Issues
+    title: mADX Open and Closed Issues
     generation: markdown
 
 menu:
   Home: index.html
   Volume 1:
     Introduction: volume-1.html
-    Actors and Transactions: volume-1.html#actors-and-transactions
+    Actors, Transactions and Content Modules: volume-1.html#actors-transactions-content-modules
     Actor Options: volume-1.html#actor-options
     Required Actor Groupings: volume-1.html#required-groupings
     Overview: volume-1.html#overview
     Security Considerations: volume-1.html#security-considerations
     Cross-Profile Considerations: volume-1.html#other-grouping
   Volume 2:
-    "Transaction one [Domain-YY]": domain-YY.html
+    "Send Aggregate Report [QRPH-58]": QRPH-58.html
+    "Retrieve Aggregate Report Definition [QRPH-59]": QRPH-59.html
   Volume 3:
-    "Content one [Domain-ZZ]": domain-ZZ.html
+    "Content Modules": volume-3.html
+  Volume 4:
+    "National Extensions": volume-4.html
   Artifacts: artifacts.html
   Other:
     Changes to Other IHE Specifications: other.html

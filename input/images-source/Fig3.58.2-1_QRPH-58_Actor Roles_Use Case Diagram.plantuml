@@ -1,0 +1,5 @@
+@startuml
+:Content Creator: --> (QRPH-58)
+:Content Consumer: --> (QRPH-58)
+(Send Aggregate Report [QRPH-58]) as (QRPH-58)
+@enduml

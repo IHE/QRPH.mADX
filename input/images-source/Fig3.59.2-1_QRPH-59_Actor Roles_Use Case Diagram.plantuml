@@ -1,0 +1,5 @@
+@startuml
+:Content Data Structure \nCreator: --> (QRPH-59)
+:Content Consumer: --> (QRPH-59)
+(Retrieve Aggregate \nReport Definition \n[QRPH-59]) as (QRPH-59)
+@enduml
