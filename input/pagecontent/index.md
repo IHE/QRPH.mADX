@@ -10,8 +10,10 @@ Whenever possible, IHE profiles are based on established and stable underlying s
 Product implementations and site deployments may need to be updated in order for them to remain interoperable and conformant with an updated IHE profile.
 This mADX Profile incorporates content from Release 4 of the HL7 FHIR specification. HL7 describes FHIR Change Management and Versioning at https://www.hl7.org/fhir/versions.html.
 HL7 provides a rating of the maturity of FHIR content based on the FHIR Maturity Model (FMM): level 0 (draft) through N (Normative). See http://hl7.org/fhir/versions.html#maturity. 
+
 The FMM levels for FHIR content used in this profile are:
-| FHIR Content(Resources, ValueSets, etc.) | FMM Level |
+
+| FHIR Content (Resources, ValueSets, etc.) | FMM Level |
 | --- | --- |
 | Measure | 2 |
 | MeasureReport | 2 |
@@ -28,7 +30,7 @@ The primary purpose of the mADX Profile is to provide an alternative for the exc
 - Bandwidth limitations when trying to transfer an ADX/DSD for validation of an ADX. Facility and location lists can be large which complicates deployments in resource constrained settings.
 - Management and exchange of code lists for disaggregators.
 
-mADX profiles HL7 FHIR Terminology Services and the HL7 FHIR Measure resource. Additionally, this profile makes use of the Mobile Care Services Discovery (mCSD) Profile for facility and location data. The mADX Profile will allow vendors and implementers to utilize the robust ecosystem of tools around HL7 FHIR and promote standards-based routine reporting.
+mADX profiles HL7 FHIR Measure and MeasureReport resources. Additionally, this profile makes use of the Mobile Care Services Discovery (mCSD) Profile for facility and location data and the Sharing Valuesets and Codes Maps (SVCM) Profile for terminology meta data.  The mADX Profile will allow vendors and implementers to utilize the robust ecosystem of tools around HL7 FHIR and promote standards-based routine reporting.
 
 **Approach**
 

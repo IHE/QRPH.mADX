@@ -61,7 +61,7 @@ The purpose of profiling the base Measure is to provide guidance regarding which
 
 ### 8.3 mADX Message Exchange Constraints
 
-There are implicit assumptions regarding the sharing of additional metadata between Content Creators and Content Consumers which are not covered within the scope of the mADX Profile. In order to ensure semantic validity of the exchanged data, the constraints described below shall be specified using processes not defined by this profile:
+There are implicit assumptions regarding the sharing of additional metadata between Content Creators and Content Consumers which are not covered within the scope of the mADX Profile. To ensure semantic validity of the exchanged data, the constraints described below shall be specified using processes not defined by this profile:
 - The data elements to be reported for particular Organizational Units. For example, reporting ‘Number of lab Tests performed’ from a health facility which did not perform laboratory tests is not constrained by mADX.
 
 The Value type (real or integer) expected for individual data elements.
@@ -69,4 +69,4 @@ The Value type (real or integer) expected for individual data elements.
 - Which period types are appropriate for which data elements. For an informative sample of period types please see the Aggregate Data Exchange Technical Framework Supplement Appendix 8J – (Informative) Formatting of times and time intervals in ADX.
 - Description of age disaggregations shall follow the format described in the ADX Profile (Appendix 8K – Representation of age groups in ADX).
 
-The preceding is not an exhaustive list. Other business rules that may affect interoperability may need to be established such as bounds on data values, bounds on date ranges, relationships between different data elements (e.g., the sum of these data elements cannot be greater than the sum of those data elements, etc.)
+The preceding is not an exhaustive list. Other business rules that may affect interoperability may need to be established such as bounds on data values, bounds on date ranges, relationships between different data elements (e.g. the sum of these data elements cannot be greater than the sum of those data elements, etc.).

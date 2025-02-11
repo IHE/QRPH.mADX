@@ -1,0 +1,9 @@
+@startuml
+
+participant "Content Data Structure Consumer" as Consumer
+participant "Content Data Structure Creator" as Creator
+
+Consumer->Creator: Retrieve Aggregate Report Definition [QRPH-59] request
+Creator->Consumer: Retrieve Aggregate Report Definition [QRPH-59] response
+
+@enduml

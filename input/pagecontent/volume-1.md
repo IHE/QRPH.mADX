@@ -18,13 +18,13 @@ Table 1:06.1-1 lists the transactions for each actor directly involved in the mA
 
 <p id ="t1:06.1-1" class="tableTitle">Table 1:06.1-1: mADX Profile - Actors and Transactions</p>
 
-|         |                 |                 |                                   |
-|---------|-----------------|-----------------|-----------------------------------|
-| **Actors**  |**Transactions**|   **Optionality**  | **Reference**|    
-| Content Creator | Send Aggregate Report [QRPH-58] | R?   | ? |   
-| Content Consumer | Send Aggregate Report Result [QRPH-58] | R?   | ? |  
-| Content Data Structure Consumer | Retrieve Aggregate Report Definition [QRPH-59] | R?   | ? |   
-| Content Data Structure Creator | Retrieve Aggregate Report Definition Response [QRPH-59] | R?   | ? |  
+|         |                 |                 |              |                     |
+|---------|-----------------|-----------------|--------------|---------------------|
+| **Actors**  |**Transactions**| **Initiator or Responder** |  **Optionality**  | **Reference**|    
+| Content Creator | Send Aggregate Report [QRPH-58] | Initiator |R| QRPH TF-2: 3.58 |   
+| Content Consumer | Send Aggregate Report [QRPH-58] | Responder |R| QRPH TF-2: 3.58 |  
+| Content Data Structure Consumer | Retrieve Aggregate Report Definition [QRPH-59] | Initiator |R| QRPH TF-2: 3.59 |   
+| Content Data Structure Creator | Retrieve Aggregate Report Definition [QRPH-59] | Responder |R| QRPH TF-2: 3.59|  
 
 Table 1:06.1-2 lists the content module(s) defined in the mADX Profile. To claim support for this profile, an actor shall support all required content modules (labeled “R”) and may support optional content modules (labeled “O”). 
 
@@ -84,13 +84,14 @@ A Content Consumer **SHALL** be able to process a data stream that is conformant
 
 <a name="CareServicesUpdateSupplier"> </a>
 #### 1:06.1.1.5  Care Services Update Supplier
-The Care Services Update Supplier is defined in the mCSD Profile in Section X.1.
+The Care Services Update Supplier is defined in the mCSD Profile in Section [1:46.1.1.4](https://profiles.ihe.net/ITI/mCSD/volume-1.html#1461-mcsd-actors-transactions-and-content-modules).
+
 mADX leverages location services from Care Services Update Supplier.
 The Care Services Update Supplier provides the set of valid spatial dimensions as HL7 FHIR locations and is the source of the location data referenced in an ADX message. The list of valid locations is determined by the implementing jurisdiction.
 
 <a name="CareServicesUpdateConsumer"> </a>
 #### 1:06.1.1.6 Care Services Update Consumer
-The Care Services Update Consumer is defined in the mCSD Profile in Section X.1.
+The Care Services Update Consumer is defined in the mCSD Profile in Section [1:46.1.1.3](https://profiles.ihe.net/ITI/mCSD/volume-1.html#1461-mcsd-actors-transactions-and-content-modules).
 
 ### 1:06.1.2 Transaction Descriptions
 
@@ -126,13 +127,13 @@ Options that may be selected for each actor in this implementation guide, are li
 
 ### 1:06.2.1 Validate mADX Message Option
 
-The Content Creator or Content Consumer Actors, **SHALL** be grouped with the Content Data Structure Consumer, the SVCM Terminology Consumer and the mCSD Care Services Updates Consumer if the Validate mADX Message Option is used, which includes the Retrieve Indicator Definition [QRPH-59] transaction.
+The Content Creator or Content Consumer Actors, **SHALL** be grouped with the Content Data Structure Consumer, the SVCM Terminology Consumer and the mCSD Care Services Updates Consumer if the Validate mADX Message Option is used, which includes the Retrieve Aggregate Report Definition [QRPH-59] transaction.
 
 <a name="required-groupings"> </a>
 
 ## 1:06.3 mADX Required Actor Groupings
 
-There are no Required Actor Groupings defined except in the Validate mADX Message Option where the Content Creator or Content Consumer Actors, **SHALL** be grouped with the Content Data Structure Consumer, the SVCM Terminology Consumer and the mCSD Care Services Updates Consumer as indicated in Section 1:06.2.1.
+There are no Required Actor Groupings defined except in the Validate mADX Message Option where the Content Creator or Content Consumer Actors, **SHALL** be grouped with the Content Data Structure Consumer, the SVCM Terminology Consumer and the mCSD Care Services Update Consumer as indicated in Section 1:06.2.1.
 
 <p id ="t1:06.3-1" class="tableTitle">Table 1:06.3-1: Actor Groupings</p>
 
@@ -149,9 +150,9 @@ There are no Required Actor Groupings defined except in the Validate mADX Messag
 <tr class="odd">
 <td>Content Creator</td>
 <td><p><em>SVCM / Terminology Consumer</em></p>
-<p><em>mCSD / Care Services Updates Consumer</em></p>
+<p><em>mCSD / Care Services Update Consumer</em></p>
 <p><em>Content Data Structure Consumer</em></p>
-<p><em>with Validate mADX Message Option</em></p></td>
+<p><em><b>with</b> Validate mADX Message Option</em></p></td>
 <td><p><em> Section 1:06.2.1</em></p>
 </td>
 <td>--</td>
@@ -160,9 +161,9 @@ There are no Required Actor Groupings defined except in the Validate mADX Messag
 <td>Content Consumer</td>
 <td>
 <p><em>SVCM / Terminology Consumer</em></p>
-<p><em>mCSD / Care Services Updates Consumer</em></p>
+<p><em>mCSD / Care Services Update Consumer</em></p>
 <p><em>Content Data Structure Consumer</em></p>
-<p><em>with Validate mADX Message Option</em></p></td>
+<p><em><b>with</b> Validate mADX Message Option</em></p></td>
 <td><p><em> Section 1:06.2.1</em></p>
 </td>
 <td>--</td>
@@ -183,7 +184,7 @@ mADX defines a HL7 FHIR Measure Resource. The Measure Resource defines the metad
 This profile sets constraints on the mandatory dimensions which shall be in a Measure Resource . Additional data element dimensions may be defined as necessary within the context of use - for example, within a particular country or implementing jurisdiction. Similarly, whereas mADX assumes that code sets and other structural metadata will be shared with Content Creators and Content Consumers under the Validate Option as described in 1:06.2.1. These inputs to the mADX message schema definition are conceptually illustrated by Figure 1:06.4-1 in which the Content Creator and Content Consumer are both enacting the Validate mADX Message Option.
 
 <figure>
-{%include Fig1.06_4-1_mADX_inputs_and_outputs.png%}
+<img src="./Fig1.06_4-1_mADX_Inputs_and_Outputs.jpg" style="width:60%; align:center"/>
 <figcaption><b>Figure 1:06.4-1: An illustration of mADX Profile inputs and outputs</b></figcaption>
 </figure>
 <br clear="all">
@@ -210,7 +211,7 @@ The use cases that mADX is solving for are the same as those defined in Section 
 
 ## 1:06.5 mADX Security Considerations
 
-The mADX Profile does not support the exchange of person-centric health information. Therefore, this profile does not specify security mechanisms, such as the ITI Audit Trail and Node Authentication (ATNA) Profile, that would be required were that the case. Implementers should nevertheless be sensitive to the possibility of approximate personal identification arising from aggregate data derived from small population sets. Transport of such data should be safeguarded according to jurisdictional guidelines.
+The mADX Profile does not support the exchange of person-centric health information. Therefore, this profile does not specify security mechanisms, such as the ITI Audit Trail and Node Authentication (ATNA) Profile, that would be required where is the case. Implementers should nevertheless be sensitive to the possibility of approximate personal identification arising from aggregate data derived from small population sets. Transport of such data should be safeguarded according to jurisdictional guidelines.
 Person-centric Health Information (PHI) should be de-identified according to jurisdictional guidelines, however recommendations can be found in the IT Infrastructure Handbook De-Identification.
 
 <a name="other-grouping"> </a>

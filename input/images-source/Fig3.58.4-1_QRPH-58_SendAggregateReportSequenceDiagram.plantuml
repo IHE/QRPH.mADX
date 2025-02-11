@@ -1,0 +1,9 @@
+@startuml
+
+participant "Content Creator" as Creator
+participant "Content Consumer" as Consumer
+
+Creator->Consumer: Send Aggregate Report [QRPH-58] request
+Consumer->Creator: Send Aggregate Report [QRPH-58] response
+
+@enduml
