@@ -62,7 +62,7 @@ The indicator **SHALL** contain the following elements:
 - ```period``` The start and end of the reporting period
 - ```group.coding.code``` A required reference for a valid indicator
 - ```stratifier.stratum.value``` A required value for each reported aggregate report
-- ```stratifier.stratum.component``` An optional value that should be present for each disaggregation dimensioned included in the report
+- ```stratifier.stratum.component``` An optional value that should be present for each disaggregation dimension included in the report
 
 ##### 3.58.4.1.3 Expected Actions
 

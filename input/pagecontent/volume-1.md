@@ -183,11 +183,10 @@ mADX defines a HL7 FHIR Measure Resource. The Measure Resource defines the metad
 
 This profile sets constraints on the mandatory dimensions which shall be in a Measure Resource . Additional data element dimensions may be defined as necessary within the context of use - for example, within a particular country or implementing jurisdiction. Similarly, whereas mADX assumes that code sets and other structural metadata will be shared with Content Creators and Content Consumers under the Validate Option as described in 1:06.2.1. These inputs to the mADX message schema definition are conceptually illustrated by Figure 1:06.4-1 in which the Content Creator and Content Consumer are both enacting the Validate mADX Message Option.
 
-<figure>
-<img src="./Fig1.06_4-1_mADX_Inputs_and_Outputs.jpg" style="width:60%; align:center"/>
-<figcaption><b>Figure 1:06.4-1: An illustration of mADX Profile inputs and outputs</b></figcaption>
-</figure>
-<br clear="all">
+![Figure 1:06.4-1: An illustration of mADX Profile inputs and outputs](mADXInputsandOutputs.jpg)
+<div style="clear: left;"></div>
+
+**Figure 1:06.4-1: An illustration of mADX Profile inputs and outputs**
 
 ### 1:06.4.1 Concepts
 

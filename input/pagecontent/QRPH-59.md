@@ -94,7 +94,7 @@ The HL7 FHIR Measure response **SHALL** contain the following elements:
 - ```title``` A human friendly name for this Measure.
 - ```publisher``` The organization responsible for publishing and maintaining the Measure.
 - ```description``` A narrative description of the scope of the Measure.
-- ```subject.coding[].code``` It will indicate the base resource in which the indicator is intended to run.
+- ```subjectCodeableConcept.coding[].code``` It will indicate the base resource in which the indicator is intended to run.
 - ```relatedArtifact[]``` There should be a related artifact for each dissagregation set defined under ```group[].stratifier[].component[]```.
 - ```relatedArtifact[].label``` The label should match one of the values of ```group[].stratifier[].component[].code``` for a disaggregation value set.
 - ```relatedArtifact[].url``` The URL of a FHIR Valueset that defines the valid values reported in this disaggregation component as cross-referenced by ```relatedArtifact[].label```.
@@ -102,9 +102,9 @@ The HL7 FHIR Measure response **SHALL** contain the following elements:
 - ```group[]``` There should be a group element for each indicator that can be calculated based on the MDS defined in the Measure. Each group member should have a unique code defined, relative to the Measure.
 - ```group[].description``` A narrative description of an indicator.
 - ```group[].code.coding[]``` The "code" should be a unique code distinguishing the indicator within the Measure.
-- ```group[].stratifier[]``` Contains the disaggregating value sets needed required for an indicator.
+- ```group[].stratifier[]``` Contains the disaggregating value sets needed for an indicator.
 - ```group[].stratifier[].component[]``` There should be a “component” for each set of disaggregators which is linked to a FHIR ValueSet.
-- ```group[].stratifier[].component[].code``` A code used to reference this disaggregating valueset. There must be a relatedArtifact (see below) for each disaggregation set which is a reference to a FHIR Valueset.
+- ```group[].stratifier[].component[].code``` A code used to reference this disaggregating valueset. There must be a relatedArtifact (see above) for each disaggregation set which is a reference to a FHIR Valueset.
 
 ##### 3.59.4.2.3 Expected Actions
 
