@@ -13,5 +13,3 @@ Description: "IHE mADX profile based on HL7 FHIR MeasureReport R4"
 * group.stratifier.stratum.measureScore 1..
 * group.stratifier.stratum.measureScore.value 1..
 * group.stratifier.stratum.measureScore.value ^short =  "A required value for each reported aggregate report."
-* group.stratifier.stratum.component 1..
-* group.stratifier.stratum.component ^short =  "A component that should be present for each disaggregation dimension included in the report."

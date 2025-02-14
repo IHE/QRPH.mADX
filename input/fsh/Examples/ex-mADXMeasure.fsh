@@ -1,7 +1,9 @@
 Alias: $resource-types = http://hl7.org/fhir/resource-types
 Alias: $madx = http://ihe.net/qrph/madx/
 Alias: $measure-population = http://terminology.hl7.org/CodeSystem/measure-population
-Alias: $administrative-gender = http://hl7.org/fhir/administrative-gender
+Alias: $measure-stratifier-example = http://hl7.org/fhir/measure-stratifier-example
+Alias: $ageGroup = http://hl7.org/fhir/us/ndh/CodeSystem/AgeGroupCS
+Alias: $versionAlgorithm = http://hl7.org/fhir/version-algorithm
 
 Instance: madx-hiv-indicators-example
 InstanceOf: IHEmADXMeasure
@@ -17,24 +19,35 @@ Usage: #example
 * publisher = "ohie.org"
 * description = "EXAMPLE indicators supporting OpenHIE implementations of the IHE ADX-HIV content profile"
 * subjectCodeableConcept = $resource-types#Patient
-* date = "2019-08-02"
-* relatedArtifact.label = "Gender"
-* relatedArtifact.url = "http://hl7.org/fhir/administrative-gender"
-* relatedArtifact.type = #depends-on
+* date = "2024-08-02"
+* relatedArtifact[0].label = "Gender"
+* relatedArtifact[0].url = "http://hl7.org/fhir/measure-stratifier-example"
+* relatedArtifact[0].type = #depends-on
+* relatedArtifact[1].label = "Age"
+* relatedArtifact[1].url = "http://hl7.org/fhir/measure-stratifier-example"
+* relatedArtifact[1].type = #depends-on
 * group.code = $madx#QRPH_mADX_ART1_N
 * group.description = "Number of adults newly enrolled on antiretroviral therapy (ART)"
 * group.population.code = $measure-population#measure-population
 * group.population.criteria.language = #text/cql
 * group.population.criteria.expression = "Measure Population"
-* group.stratifier.component[0].code = $administrative-gender#male
-* group.stratifier.component[=].criteria.language = #text/cql
-* group.stratifier.component[=].criteria.expression = "MaleGender_expression"
-* group.stratifier.component[+].code = $administrative-gender#female
-* group.stratifier.component[=].criteria.language = #text/cql
-* group.stratifier.component[=].criteria.expression = "FemaleGender_expression"
-* group.stratifier.component[+].code = $administrative-gender#other
-* group.stratifier.component[=].criteria.language = #text/cql
-* group.stratifier.component[=].criteria.expression = "OtherGender_expression"
-* group.stratifier.component[+].code = $administrative-gender#unknown
-* group.stratifier.component[=].criteria.language = #text/cql
-* group.stratifier.component[=].criteria.expression = "UnknownGender_expression"
+* group.stratifier[0].code = $measure-stratifier-example#gender
+* group.stratifier[0].component[0].code = $administrative-gender#male
+* group.stratifier[0].component[0].criteria.language = #text/cql
+* group.stratifier[0].component[0].criteria.expression = "MaleGender_expression"
+* group.stratifier[0].component[1].code = $administrative-gender#female
+* group.stratifier[0].component[1].criteria.language = #text/cql
+* group.stratifier[0].component[1].criteria.expression = "FemaleGender_expression"
+* group.stratifier[0].component[2].code = $administrative-gender#other
+* group.stratifier[0].component[2].criteria.language = #text/cql
+* group.stratifier[0].component[2].criteria.expression = "OtherGender_expression"
+* group.stratifier[0].component[3].code = $administrative-gender#unknown
+* group.stratifier[0].component[3].criteria.language = #text/cql
+* group.stratifier[0].component[3].criteria.expression = "UnknownGender_expression"
+* group.stratifier[1].code = $measure-stratifier-example#age
+* group.stratifier[1].component[0].code = $ageGroup#adults
+* group.stratifier[1].component[0].criteria.language = #text/cql
+* group.stratifier[1].component[0].criteria.expression = "adults_20-65"
+* group.stratifier[1].component[1].code = $ageGroup#seniors
+* group.stratifier[1].component[1].criteria.language = #text/cql
+* group.stratifier[1].component[1].criteria.expression = "seniors_65+"
