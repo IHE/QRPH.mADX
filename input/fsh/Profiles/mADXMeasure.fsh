@@ -20,10 +20,10 @@ Description: "IHE mADX profile based on HL7 FHIR Measure R4"
 * group.description 1..
 * group.description ^short =  "A narrative description of an indicator."
 * group.code.coding 1..
-* group.code ^short =  "The “code“ should be a unique code distinguishing the indicator within the Measure."
+* group.code ^short =  "The code should be a unique code distinguishing the indicator within the Measure."
 * group.stratifier 1..
 * group.stratifier ^short =  "Contains the disaggregating value sets needed for an indicator."
 * group.stratifier.component 1..
-* group.stratifier.component ^short =  "There should be a “component” for each set of disaggregators which is linked to a FHIR ValueSet"
+* group.stratifier.component ^short =  "There should be a component for each set of disaggregators which is linked to a FHIR ValueSet"
 * group.stratifier.component.code 1..
 * group.stratifier.component.code ^short =  "A code used to reference this disaggregating valueset. There must be a relatedArtifact for each disaggregation set which is a reference to a FHIR Valueset"
