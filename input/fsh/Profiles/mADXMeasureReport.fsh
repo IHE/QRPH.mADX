@@ -5,9 +5,7 @@ Title:       "IHE mADX MeasureReport profile"
 Description: "IHE mADX profile based on HL7 FHIR MeasureReport R4"
 
 * subject 1..
-* subject ^short =  "A required location reference."
-* period 1..
-* period ^short =  "The start and end of the reporting period."
+* subject ^short =  "A required subject reference."
 * group 1..
 * group.code.coding.code. 1..
 * group.code ^short =  "A required reference for a valid indicator."
