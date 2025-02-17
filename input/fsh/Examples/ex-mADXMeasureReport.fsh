@@ -3,6 +3,7 @@ Alias: $measure-population = http://terminology.hl7.org/CodeSystem/measure-popul
 Alias: $measure-stratifier-example = http://hl7.org/fhir/measure-stratifier-example
 Alias: $administrative-gender = http://hl7.org/fhir/administrative-gender
 Alias: $ageGroup = http://hl7.org/fhir/us/ndh/CodeSystem/AgeGroupCS
+Alias: $improvementNotation = http://terminology.hl7.org/CodeSystem/measure-improvement-notation
 
 Instance: mADX-MeasureReport-example
 InstanceOf: IHEmADXMeasureReport
@@ -15,9 +16,12 @@ Usage: #example
 * reporter = Reference(HealthPost12345)
 * period.start = "2025-01-01"
 * period.end = "2025-01-31"
+* improvementNotation = $improvementNotation#increase
 * group.code = $madx#QRPH_mADX_ART1_N
-* group.population.code = $measure-population#measure-population
-* group.population.count = 500
+* group.population[0].code = $measure-population#denominator
+* group.population[0].count = 150000
+* group.population[1].code = $measure-population#numerator
+* group.population[1].count = 500
 * group.stratifier[0].code = $measure-stratifier-example#gender
 * group.stratifier[0].stratum[0].measureScore.value = 230
 * group.stratifier[0].stratum[0].value = $administrative-gender#male

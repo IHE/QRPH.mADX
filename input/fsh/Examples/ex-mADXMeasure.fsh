@@ -3,22 +3,22 @@ Alias: $madx = http://ihe.net/qrph/madx/
 Alias: $measure-population = http://terminology.hl7.org/CodeSystem/measure-population
 Alias: $measure-stratifier-example = http://hl7.org/fhir/measure-stratifier-example
 Alias: $ageGroup = http://hl7.org/fhir/us/ndh/CodeSystem/AgeGroupCS
-Alias: $versionAlgorithm = http://hl7.org/fhir/version-algorithm
+Alias: $improvementNotation = http://terminology.hl7.org/CodeSystem/measure-improvement-notation
 
-Instance: madx-hiv-indicators-example
+Instance: madx-hiv-indicator-example
 InstanceOf: IHEmADXMeasure
 Usage: #example
-* url = "http://ohie.org/Measure/madx-hiv-indicators-example"
+* url = "http://ohie.org/Measure/madx-hiv-indicator-example"
 * identifier.system = "http://ohie.org/Measure/"
-* identifier.value = "madx-hiv-indicators-example"
+* identifier.value = "madx-hiv-indicator-example"
 * version = "0.0.1"
-* name = "mADXHivIndicatorsExample"
+* name = "HIV.IND.21"
 * title = "mADX-Measure-example"
 * status = #draft
 * experimental = true
 * publisher = "ohie.org"
-* description = "EXAMPLE indicators supporting OpenHIE implementations of the IHE ADX-HIV content profile"
-* subjectCodeableConcept = $resource-types#Patient
+* description = "Example indicator supporting mADX implementation of the IHE mADX profile"
+* subjectCodeableConcept = $resource-types#Location
 * date = "2024-08-02"
 * relatedArtifact[0].label = "Gender"
 * relatedArtifact[0].url = "http://hl7.org/fhir/measure-stratifier-example"
@@ -26,11 +26,17 @@ Usage: #example
 * relatedArtifact[1].label = "Age"
 * relatedArtifact[1].url = "http://hl7.org/fhir/measure-stratifier-example"
 * relatedArtifact[1].type = #depends-on
+* improvementNotation = $improvementNotation#increase
 * group.code = $madx#QRPH_mADX_ART1_N
-* group.description = "Number of adults newly enrolled on antiretroviral therapy (ART)"
-* group.population.code = $measure-population#measure-population
-* group.population.criteria.language = #text/cql
-* group.population.criteria.expression = "Measure Population"
+* group.description = "% of people newly diagnosed with HIV initiated on ART"
+* group.population[0].code = $measure-population#numerator
+* group.population[0].description = "Number of people newly diagnosed with HIV and started on ART during the reporting period"
+* group.population[0].criteria.language = #text/cql
+* group.population[0].criteria.expression = "Numerator_expression"
+* group.population[1].code = $measure-population#denominator
+* group.population[0].description = "Number of people newly diagnosed with HIV during the reporting period"
+* group.population[1].criteria.language = #text/cql
+* group.population[1].criteria.expression = "Denominator_expression"
 * group.stratifier[0].code = $measure-stratifier-example#gender
 * group.stratifier[0].component[0].code = $administrative-gender#male
 * group.stratifier[0].component[0].criteria.language = #text/cql

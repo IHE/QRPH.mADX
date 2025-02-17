@@ -15,12 +15,15 @@ Description: "IHE mADX profile based on HL7 FHIR Measure R4"
 * relatedArtifact.label ^short = "The label should match one of the values of group[].stratifier[].component[].code for a disaggregation value set."
 * relatedArtifact.url 1..
 * relatedArtifact.url ^short = "The URL of a FHIR Valueset that defines the valid values reported in this disaggregation component as cross-referenced by relatedArtifact[].label"
+* improvementNotation 1..
 * group 1..
 * group ^short =  "There should be a group element for each indicator that can be calculated based on the MDS defined in the Measure. Each group member should have a unique code defined, relative to the Measure."
 * group.description 1..
 * group.description ^short =  "A narrative description of an indicator."
 * group.code.coding 1..
 * group.code ^short =  "The code should be a unique code distinguishing the indicator within the Measure."
+* group.population 1..
+* group.population.code 1..
 * group.stratifier 1..
 * group.stratifier ^short =  "Contains the disaggregating value sets needed for an indicator."
 * group.stratifier.component 1..
