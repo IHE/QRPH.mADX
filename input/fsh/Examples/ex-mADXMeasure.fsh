@@ -11,7 +11,7 @@ Usage: #example
 * identifier.system = "http://ohie.org/Measure/"
 * identifier.value = "madx-hiv-indicator-example"
 * version = "0.0.1"
-* name = "HIV.IND.21"
+* name = "HIVInd21"
 * title = "mADX-Measure-example"
 * status = #draft
 * experimental = true

@@ -1,6 +1,17 @@
 == Suppressed Messages ==
-# instructions for ignoreWarnings.txt https://confluence.hl7.org/pages/viewpage.action?pageId=66938614#ImplementationGuideParameters-ManagingWarningsandHints
-# IHE valueset that is not yet a real valueset
-Code System URI 'urn:ihe:event-type-code' is unknown so the code cannot be validated
 
+# Build errors related to "versionAlgorithm" valueSet. This valueSet is defined in R5. An issue is active on Zulip for this https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/ShareableMeasure.20QA.20error
+The reference http://hl7.org/fhir/ValueSet/version-algorithm could not be resolved
+The link 'version-algorithm.html' for "version-algorithm" cannot be resolved
 
+# IHE valuesets/resources that are not real valuesets/resources (those were used only for demonstration purposes)
+A definition for CodeSystem 'http://ihe.net/qrph/madx/' could not be found, so the code cannot be validated
+The Measure 'http://ohie.org/Measure/madx-hiv-indicators-example' could not be resolved, so no validation can be performed against the Measure
+
+# Errors and warnings related to "measure-stratifier-example" valueSet defined in R5 but not in R4, so the IG cannot validate it (this valueSet was used only as an example)
+A definition for CodeSystem 'http://hl7.org/fhir/measure-stratifier-example' could not be found, so the code cannot be validated
+URL value 'http://hl7.org/fhir/measure-stratifier-example' does not resolve
+
+# Errors and warnings related to "AgeGroupCS" valueSet. This valueSet was recently made "Active" (2025-02-13) so we assume that is not yet "verifiable" (this valueSet was used only as an example)
+A definition for CodeSystem 'http://hl7.org/fhir/us/ndh/CodeSystem/AgeGroupCS' could not be found, so the code cannot be validated
+URL value 'http://hl7.org/fhir/us/ndh/CodeSystem/AgeGroupCS' does not resolve
