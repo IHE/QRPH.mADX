@@ -8,6 +8,7 @@ Alias: $improvementNotation = http://terminology.hl7.org/CodeSystem/measure-impr
 Instance: mADX-MeasureReport-example
 InstanceOf: IHEmADXMeasureReport
 Usage: #example
+Description: "Example indicator supporting mADX implementation of the IHE mADXMeasureReport profile"
 * measure = "http://ohie.org/Measure/madx-hiv-indicators-example"
 * contained = HealthPost12345
 * subject = Reference(HealthPost12345)
@@ -27,15 +28,19 @@ Usage: #example
 * group.stratifier[0].stratum[0].value = $administrative-gender#male
 * group.stratifier[0].stratum[1].measureScore.value = 200
 * group.stratifier[0].stratum[1].value = $administrative-gender#female
-* group.stratifier[0].stratum[2].measureScore.value = 50
+* group.stratifier[0].stratum[2].measureScore.value = 70
 * group.stratifier[0].stratum[2].value = $administrative-gender#other
-* group.stratifier[0].stratum[3].measureScore.value = 20
-* group.stratifier[0].stratum[3].value = $administrative-gender#unknown
+* group.stratifier[1].stratum[0].measureScore.value = 20
 * group.stratifier[1].code = $measure-stratifier-example#age
-* group.stratifier[1].stratum[0].measureScore.value = 410
-* group.stratifier[1].stratum[0].value = $ageGroup#adults
-* group.stratifier[1].stratum[1].measureScore.value = 90
-* group.stratifier[1].stratum[1].value = $ageGroup#seniors
+* group.stratifier[1].stratum[0].value = $ageGroup#infants
+* group.stratifier[1].stratum[1].measureScore.value = 70
+* group.stratifier[1].stratum[1].value = $ageGroup#children
+* group.stratifier[1].stratum[2].measureScore.value = 130
+* group.stratifier[1].stratum[2].value = $ageGroup#teens
+* group.stratifier[1].stratum[3].measureScore.value = 170
+* group.stratifier[1].stratum[3].value = $ageGroup#adults
+* group.stratifier[1].stratum[4].measureScore.value = 110
+* group.stratifier[1].stratum[4].value = $ageGroup#seniors
 
 Instance: HealthPost12345
 InstanceOf: Location

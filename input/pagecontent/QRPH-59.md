@@ -61,7 +61,7 @@ This transaction responds to the Content Data Structure Consumer requesting an m
 
 The Retrieve Aggregate Report Definition [QRPH-59] is implemented as a FHIR Read transaction defined in the RESTful API implementation guide: https://www.hl7.org/fhir/http.html#read.
 
-An example Measure is provided in [here] (linkToFHIRexample).
+An example Measure is provided in the "Artifacts" page of this profile.
 
 ##### 3.59.4.2.1 Trigger Events
 
@@ -95,16 +95,20 @@ The HL7 FHIR Measure response **SHALL** contain the following elements:
 - ```publisher``` The organization responsible for publishing and maintaining the Measure.
 - ```description``` A narrative description of the scope of the Measure.
 - ```subjectCodeableConcept.coding[].code``` It will indicate the base resource in which the indicator is intended to run.
-- ```relatedArtifact[]``` There should be a related artifact for each dissagregation set defined under ```group[].stratifier[].component[]```.
-- ```relatedArtifact[].label``` The label should match one of the values of ```group[].stratifier[].component[].code``` for a disaggregation value set.
-- ```relatedArtifact[].url``` The URL of a FHIR Valueset that defines the valid values reported in this disaggregation component as cross-referenced by ```relatedArtifact[].label```.
-- ```realatedArtifact[].type``` Should be set to “depends-on”.
-- ```group[]``` There should be a group element for each indicator that can be calculated based on the MDS defined in the Measure. Each group member should have a unique code defined, relative to the Measure.
-- ```group[].description``` A narrative description of an indicator.
+- ```improvementNotation``` The change in measured values that is indicative of an improvement for the indicator
+- ```group[]``` There should be a group element for each indicator that can be calculated in the Measure. Each group member should have a unique code defined, relative to the Measure.
 - ```group[].code.coding[]``` The "code" should be a unique code distinguishing the indicator within the Measure.
+- ```group[].description``` A narrative description of an indicator.
+- ```group.population.code``` A required population code for a valid indicator. This code should be “numerator” if the reported indicator is a number (not a proportion). A proportion should have a numerator population and a denominator population.
+
+The HL7 FHIR Measure response **SHALL** contain the following additional elements if the indicator includes disaggregation criteria: 
+
+- ```relatedArtifact[]``` There should be a related artifact for each dissagregation set defined under ```group[].stratifier[].code```.
+- ```realatedArtifact[].type``` Should be set to “depends-on”.
+- ```relatedArtifact[].label``` The label should match one of the values of ```group[].stratifier[].code``` for a disaggregation value set.
+- ```relatedArtifact[].url``` The URL of a FHIR Valueset that defines the valid values reported in this disaggregation component as cross-referenced by ```relatedArtifact[].label```.
 - ```group[].stratifier[]``` Contains the disaggregating value sets needed for an indicator.
-- ```group[].stratifier[].component[]``` There should be a “component” for each set of disaggregators which is linked to a FHIR ValueSet.
-- ```group[].stratifier[].component[].code``` A code used to reference this disaggregating valueset. There must be a relatedArtifact (see above) for each disaggregation set which is a reference to a FHIR Valueset.
+- ```group[].stratifier[].code``` There should be a code used to reference this disaggregating valueset. There must be a relatedArtifact (see above) for each disaggregation set which is a reference to a FHIR Valueset
 
 ##### 3.59.4.2.3 Expected Actions
 

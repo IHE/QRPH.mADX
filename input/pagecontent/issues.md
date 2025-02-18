@@ -1,10 +1,9 @@
 ## Significant Changes
 
-### Significant Changes from Revision x.x
+### Significant Changes from Revision 2.1 (2021-10-26)
 
-- change 1
-- change 2
-- etc.
+- Added a dependency to the [CRMIShareableMeasure](http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablemeasure) profile to reuse already defined constraints.
+- Aligned in the specifications the messages' names of both transactions, to ensure consistency in naming.
 
 ## Issues
 
@@ -19,6 +18,8 @@ Question in sure the cross-referencing of components and related artifacts are c
 - mADX_004: Should the mCSD Find Matching Care Services [ITI-90] transaction be used to locate care services or should the mCSD Request for Care Services Updates [ITI-91] transaction be used instead? Should we provide optionality to choose either one, or should we add a discussion in the cross-profile considerations which would suggest that the [ITI-91] transaction can be used in production for caching/performance issues?
 - mADX_005: FHIR supports batch use of the Read and Update transactions. Should those transactions be profiled in mADX?
 - mADX_006: Is there a need to profile async transactions in mADX? This was in scope for ADX, but is Maturity Level 2 in FHIR: [https://www.hl7.org/fhir/async.html](https://www.hl7.org/fhir/async.html)
+- mADX_007: Do we need to make required in mADXMeasureReport to have a "reporter"? In FHIR R4 and R5 "reporter" is optional.
+- mADX_008: Do we need a search transaction on Measure that reflects how a Content Data Structure Consumer is able to request all Measures available? If the answer is "yes", then what [search parameters](https://build.fhir.org/measure.html#search) should be included?
 
 ### Closed Issues
 
