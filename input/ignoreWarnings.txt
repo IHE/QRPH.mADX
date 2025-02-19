@@ -12,10 +12,23 @@ The resource Measure/madx-hiv-indicator-example could usefully have an OID assig
 # Errors and warnings related to "measure-stratifier-example" valueSet defined in R5 but not in R4, so the IG cannot validate it (this valueSet was used only as an example). Active issue in Zulip: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Can.20an.20R5.20Valueset.20be.20used.20in.20a.20n.20R4.20IG.3F
 URL value 'http://hl7.org/fhir/measure-stratifier-example' does not resolve
 A definition for CodeSystem 'http://hl7.org/fhir/measure-stratifier-example' could not be found, so the code cannot be validated
+ERROR: Measure/madx-hiv-indicator-example: Measure.group[0].stratifier[0].code.coding[0].system: URL value 'http://hl7.org/fhir/measure-stratifier-example' does not resolve
+ERROR: Measure/madx-hiv-indicator-example: Measure.group[0].stratifier[1].code.coding[0].system: URL value 'http://hl7.org/fhir/measure-stratifier-example' does not resolve
+ERROR: MeasureReport/mADX-MeasureReport-example: MeasureReport.group[0].stratifier[0].code[0].coding[0].system: URL value 'http://hl7.org/fhir/measure-stratifier-example' does not resolve
+ERROR: MeasureReport/mADX-MeasureReport-example: MeasureReport.group[0].stratifier[1].code[0].coding[0].system: URL value 'http://hl7.org/fhir/measure-stratifier-example' does not resolve
 
 # Errors and warnings related to "AgeGroupCS" valueSet. This valueSet was recently made "Active" (2025-02-13) so we assume that is not yet "verifiable" (this valueSet was used only as an example)
+ERROR: Measure/madx-hiv-indicator-example: Measure.relatedArtifact[1].url: URL value 'http://hl7.org/fhir/us/ndh/CodeSystem/AgeGroupCS' does not resolve
 URL value 'http://hl7.org/fhir/us/ndh/CodeSystem/AgeGroupCS' does not resolve
+ERROR: Measure/madx-hiv-indicator-example: Measure.relatedArtifact[1].document.url: URL value 'http://hl7.org/fhir/us/ndh/CodeSystem/AgeGroupCS' does not resolve
 A definition for CodeSystem 'http://hl7.org/fhir/us/ndh/CodeSystem/AgeGroupCS' could not be found, so the code cannot be validated
+ERROR: MeasureReport/mADX-MeasureReport-example: MeasureReport.group[0].stratifier[0].code[0].coding[0].system: URL value 'http://hl7.org/fhir/measure-stratifier-example' does not resolve
+ERROR: MeasureReport/mADX-MeasureReport-example: MeasureReport.group[0].stratifier[1].code[0].coding[0].system: URL value 'http://hl7.org/fhir/measure-stratifier-example' does not resolve
+ERROR: MeasureReport/mADX-MeasureReport-example: MeasureReport.group[0].stratifier[1].stratum[0].value.coding[0].system: URL value 'http://hl7.org/fhir/us/ndh/CodeSystem/AgeGroupCS' does not resolve
+ERROR: MeasureReport/mADX-MeasureReport-example: MeasureReport.group[0].stratifier[1].stratum[1].value.coding[0].system: URL value 'http://hl7.org/fhir/us/ndh/CodeSystem/AgeGroupCS' does not resolve
+ERROR: MeasureReport/mADX-MeasureReport-example: MeasureReport.group[0].stratifier[1].stratum[2].value.coding[0].system: URL value 'http://hl7.org/fhir/us/ndh/CodeSystem/AgeGroupCS' does not resolve
+ERROR: MeasureReport/mADX-MeasureReport-example: MeasureReport.group[0].stratifier[1].stratum[3].value.coding[0].system: URL value 'http://hl7.org/fhir/us/ndh/CodeSystem/AgeGroupCS' does not resolve
+ERROR: MeasureReport/mADX-MeasureReport-example: MeasureReport.group[0].stratifier[1].stratum[4].value.coding[0].system: URL value 'http://hl7.org/fhir/us/ndh/CodeSystem/AgeGroupCS' does not resolve
 
 # Info message related to a deprecated extension. Zulip issue created: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/elementdefinition-maxValueSet.7C5.2E2.2E0.20is.20deprecated
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
