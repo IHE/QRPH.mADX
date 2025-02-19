@@ -20,6 +20,7 @@ Question in sure the cross-referencing of components and related artifacts are c
 - mADX_006: Is there a need to profile async transactions in mADX? This was in scope for ADX, but is Maturity Level 2 in FHIR: [https://www.hl7.org/fhir/async.html](https://www.hl7.org/fhir/async.html)
 - mADX_007: Do we need to make required in mADXMeasureReport to have a "reporter"? In FHIR R4 and R5 "reporter" is optional.
 - mADX_008: Do we need a search transaction on Measure that reflects how a Content Data Structure Consumer is able to request all Measures available? If the answer is "yes", then what [search parameters](https://build.fhir.org/measure.html#search) should be included?
+- mADX_009: There are errors and warnings messages triggered by the IG builder related to the "http://hl7.org/fhir/us/ndh/CodeSystem/AgeGroupCS" valueSet, that was recently made "Active" (2025-02-13). We expect this issue to be solved in the near future, and the valueSet to get "validated", but in case this does not happen, we will look to replace this valueSet in the examples or create new valueSet.
 
 ### Closed Issues
 
