@@ -4,6 +4,13 @@
 
 - Added a dependency to the [CRMIShareableMeasure](http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablemeasure) profile to reuse already defined constraints.
 - Aligned in the specifications the messages' names of both transactions, to ensure consistency in naming.
+- Message semantics changes:
+	- **MeasureReport**:
+		- Deletions: ~~period~~
+		- Additions: ```improvementNotation```, ```group.population.code```, ```group.population.count```, ```group.stratifier.code```, ```group.stratifier.stratum.measureScore```
+	- **Measure**:
+		- Deletions: ~~group.stratifier.component~~
+		- Additions: ```improvementNotation```, ```group.population.code```, ```group.stratifier.code```
 
 ## Issues
 
@@ -21,6 +28,7 @@ Question in sure the cross-referencing of components and related artifacts are c
 - mADX_007: Do we need to make required in mADXMeasureReport to have a "reporter"? In FHIR R4 and R5 "reporter" is optional.
 - mADX_008: Do we need a search transaction on Measure that reflects how a Content Data Structure Consumer is able to request all Measures available? If the answer is "yes", then what [search parameters](https://build.fhir.org/measure.html#search) should be included?
 - mADX_009: There are errors and warnings messages triggered by the IG builder related to the "http://hl7.org/fhir/us/ndh/CodeSystem/AgeGroupCS" valueSet, that was recently made "Active" (2025-02-13). We expect this issue to be solved in the near future, and the valueSet to get "validated", but in case this does not happen, we will look to replace this valueSet in the examples or create new valueSet.
+- mADX_010: An example for stratification by 2 dimensions (Age group and Gender) was added, as this is a common scenario. We encourage the community to review the example and come up with suggestions related to how we can best represent the disaggregation by multiple criteria and multiple dimensions at the same time.
 
 ### Closed Issues
 

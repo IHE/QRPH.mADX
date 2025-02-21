@@ -30,5 +30,5 @@ Description: "IHE mADX profile based on HL7 FHIR Measure R4"
 * group.population.code ^short =  "A required population code for a valid indicator. This code should be “numerator” if the reported indicator is a number (not a proportion). A proportion should have a numerator population and a denominator population"
 * group.stratifier MS
 * group.stratifier ^short =  "Contains the disaggregating value sets needed for an indicator"
-* group.stratifier.code 1..
+* group.stratifier.code MS
 * group.stratifier.code ^short =  "There should be a code used to reference this disaggregating valueset. There must be a relatedArtifact for each disaggregation set which is a reference to a FHIR Valueset"

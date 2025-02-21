@@ -61,16 +61,19 @@ The indicator **SHALL** contain the following elements:
 - ```subject``` A required subject reference
 - ```improvementNotation``` Indicates if the values reported indicate an improvement
 - ```group.code.coding.code``` A required reference for a valid indicator
-- ```group.population.code``` A required population code for a valid indicator. This code should be “numerator” if the reported indicator is a number (not a proportion). A proportion should have a numerator population and a denominator population.
-- ```group.population.count``` The value reported for the population
+- ```group.population.code``` The populations in the group
+- ```group.population.count``` Size of the population
 
 The indicator **SHALL** contain the following additional elements if the indicator includes disaggregation criteria: 
 
 - ```group.stratifier.code``` Indicates the disaggregation criterion
-- ```group.stratifier.stratum``` Indicates the disaggregation values
-- ```group.stratifier.stratum.value``` Represents a disaggregation value for the disaggregation criterion reported
+- ```group.stratifier.stratum``` Indicates the stratum results
 - ```group.stratifier.stratum.measureScore``` The value that is reported
 - ```group.stratifier.stratum.measureScore.value``` The numeric value reported in the aggregate report
+
+The implementer **MUST SUPPORT** the following elements, needed for representing disaggregation criteria:
+- ```group.stratifier.stratum.value``` Represents a disaggregation value for the disaggregation criterion reported
+- ```group.stratifier.stratum.component``` Represents a disaggregation dimension for the disaggregation criterion reported
 
 
 ##### 3.58.4.1.3 Expected Actions

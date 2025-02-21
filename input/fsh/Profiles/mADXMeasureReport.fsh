@@ -19,10 +19,11 @@ Description: "IHE mADX profile based on HL7 FHIR MeasureReport R4"
 * group.stratifier.code 1..1
 * group.stratifier.code ^short =  "Indicates the disaggregation criterion"
 * group.stratifier.stratum 1..
-* group.stratifier.stratum ^short =  "Indicates the disaggregation values"
-* group.stratifier.stratum.value 1..
+* group.stratifier.stratum.value MS
 * group.stratifier.stratum.value ^short =  "Represents a disaggregation value for the disaggregation criterion reported"
 * group.stratifier.stratum.measureScore 1..
 * group.stratifier.stratum.measureScore ^short =  "The value that is reported"
 * group.stratifier.stratum.measureScore.value 1..
 * group.stratifier.stratum.measureScore.value ^short =  "The numeric value reported in the aggregate report"
+* group.stratifier.stratum.component MS
+* group.stratifier.stratum.component ^short =  "Represents a disaggregation dimension for the disaggregation criterion reported"
