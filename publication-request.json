@@ -6,7 +6,18 @@
     "status": "ballot",
     "sequence": "Publication",
     "desc": "Public comment",
-    "descmd": "Public-Comment",
+    "descmd": "### Significant Changes from Revision 2.1 (2021-10-26)
+
+- Added a dependency to the [CRMIShareableMeasure](http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablemeasure) profile to reuse already defined constraints.
+- Aligned in the specifications the messages' names of both transactions, to ensure consistency in naming.
+- Message semantics changes:
+	- **MeasureReport**:
+		- Deletions: ~~period~~
+		- Additions: `improvementNotation`, `group.population.code`, `group.population.count`, `group.stratifier.code`, `group.stratifier.stratum.measureScore`
+	- **Measure**:
+		- Deletions: ~~group.stratifier.component~~
+		- Additions: `improvementNotation`, `group.population.code`, `group.stratifier.code`
+",
     "changes": "issues.html",
     "title": "Mobile Aggregate Data Exchange",
     "ci-build": "https://build.fhir.org/ig/IHE/QRPH.mADX/branches/master/index.html",
