@@ -89,26 +89,29 @@ The Content Data Structure Creator **SHALL** conform to HTTPS standards and resp
 
 The HL7 FHIR Measure response **SHALL** contain the following elements:
 
-- ```url``` Where the definition of the Measure, and any updated versions, can be found.
-- ```version``` The business version of this Measure.
-- ```title``` A human friendly name for this Measure.
-- ```publisher``` The organization responsible for publishing and maintaining the Measure.
-- ```description``` A narrative description of the scope of the Measure.
-- ```subjectCodeableConcept.coding[].code``` It will indicate the base resource in which the indicator is intended to run.
-- ```improvementNotation``` The change in measured values that is indicative of an improvement for the indicator
-- ```group[]``` There should be a group element for each indicator that can be calculated in the Measure. Each group member should have a unique code defined, relative to the Measure.
-- ```group[].code.coding[]``` The "code" should be a unique code distinguishing the indicator within the Measure.
-- ```group[].description``` A narrative description of an indicator.
-- ```group.population.code``` A required population code for a valid indicator. This code should be “numerator” if the reported indicator is a number (not a proportion). A proportion should have a numerator population and a denominator population.
+- `url` Where the definition of the Measure, and any updated versions, can be found.
+- `version` The business version of this Measure.
+- `title` A human friendly name for this Measure.
+- `publisher` The organization responsible for publishing and maintaining the Measure.
+- `description` A narrative description of the scope of the Measure.
+- `subjectCodeableConcept.coding[].code` It will indicate the base resource in which the indicator is intended to run.
+- `improvementNotation` (**MS**) The change in measured values that is indicative of an improvement for the indicator
+- `group[]` There should be a group element for each indicator that can be calculated in the Measure. Each group member should have a unique code defined, relative to the Measure.
+- `group[].code.coding[]` The "code" should be a unique code distinguishing the indicator within the Measure.
+- `group[].description` A narrative description of an indicator.
+- `group.population.code` A required population code for a valid indicator.
 
 The HL7 FHIR Measure response **SHALL** contain the following additional elements if the indicator includes disaggregation criteria: 
 
-- ```relatedArtifact[]``` There should be a related artifact for each dissagregation set defined under ```group[].stratifier[].code```.
-- ```realatedArtifact[].type``` Should be set to “depends-on”.
-- ```relatedArtifact[].label``` The label should match one of the values of ```group[].stratifier[].code``` for a disaggregation value set.
-- ```relatedArtifact[].url``` The URL of a FHIR Valueset that defines the valid values reported in this disaggregation component as cross-referenced by ```relatedArtifact[].label```.
-- ```group[].stratifier[]``` Contains the disaggregating value sets needed for an indicator.
-- ```group[].stratifier[].code``` There should be a code used to reference this disaggregating valueset. There must be a relatedArtifact (see above) for each disaggregation set which is a reference to a FHIR Valueset
+- `relatedArtifact[]` There should be a related artifact for each dissagregation set defined under `group[].stratifier[].component[].code`.
+- `realatedArtifact[].type` Should be set to 'depends-on' when referencing a disaggregating value set.
+- `relatedArtifact[].label` The label should match one of the values of `group[].stratifier[].component[].code` for a disaggregation value set.
+- `relatedArtifact[].url` The URL of a FHIR value set that defines the valid values reported in this disaggregation component as cross-referenced by`relatedArtifact[].label`.
+- `group[].stratifier[]` Contains the disaggregating value sets needed for an indicator.
+- `group[].stratifier[].component[]` There should be a “component” for each set of disaggregators which is linked to a FHIR value set.
+- `group[].stratifier[].component[].code` There should be a code used to reference this disaggregating value set. There must be a relatedArtifact (see above) for each disaggregation set which is a reference to a FHIR value set.
+
+The implementers **MUST SUPPORT** support the  element `improvementNotation` because is critical for indicating improvements for the measured values. However `improvementNotation`  is optional in the Measure response message.
 
 ##### 3.59.4.2.3 Expected Actions
 
