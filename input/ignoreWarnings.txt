@@ -9,10 +9,7 @@ A definition for CodeSystem 'http://ihe.net/qrph/madx/' could not be found, so t
 A definition for CodeSystem 'http://ihe.net/qrph/madx/hiv-stratifiers-example' could not be found, so the code cannot be validated
 The resource Measure/madx-hiv-indicator-example could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 A definition for CodeSystem 'http://ihe.net/qrph/madx/TBdiagnosisResult-stratifiers-example' could not be found, so the code cannot be validated
-
-# Errors and warnings related to "AgeGroupCS" valueSet. This valueSet was recently made "Active" (2025-02-13) so we assume that is not yet "verifiable" (this valueSet was used only as an example)
-URL value 'http://hl7.org/fhir/us/ndh/CodeSystem/AgeGroupCS' does not resolve
-A definition for CodeSystem 'http://hl7.org/fhir/us/ndh/CodeSystem/AgeGroupCS' could not be found, so the code cannot be validated
+A definition for CodeSystem 'http://ohie.org/CodeSystem/iso-8601-derived-periods' could not be found, so the code cannot be validated
 
 # Known warrning message related to FHIR Measure validation. An issue is active on HL7 Jira: https://jira.hl7.org/browse/FHIR-49884
-A measure group stratifier should have a code when there is more than one population MEASURE_M_GROUP_STRATA_NO_CODE
+A measure group stratifier should have a code when there is more than one population
