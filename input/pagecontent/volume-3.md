@@ -4,6 +4,7 @@
 The QRPH registry of OIDs is located at [https://wiki.ihe.net/index.php/QRPH_Registry](https://wiki.ihe.net/index.php/QRPH_Registry)
 
 Additions to the QRPH OID Registry are:
+
 |codeSystem | codeSystemName | Description |
 |-------------------|--------------------------|---------------|
 | NA | NA|NA|
@@ -15,12 +16,14 @@ NA
 ### 5.3 IHE Format Codes and Vocabularies
 
 #### 5.3.1 IHE Format Codes
+
 |Profile | Format Code| Media Type | Template ID |
 |-------------------|--------------------------|---------------|--------|
 | NA | NA|NA|NA|
 
 #### 5.3.2 IHEActCode Vocabulary
-|Code| Description |
+
+|Code | Description |
 |-------------------|--------------------------|
 | NA | NA|
 
