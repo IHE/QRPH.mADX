@@ -35,6 +35,11 @@ dependencies:
     id: crmi
     version: 1.0.0
     reason: This IG uses content management profiles and capabilities provided by the Canonical Resource Management Infrastructure (CRMI) IG
+ hl7.terminology: 5.5.0
+ hl7.fhir.uv.extensions.r4: 
+    id: ext
+    version: 5.1.0
+    reason: Making this dependency more explicit
 
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   path-resource:

@@ -21,7 +21,7 @@ Integration Tests in this context is where two SUT of paired actors test against
 ## High-level Test Scope
 
 ### Content Data Structure Creator
-The Content Data Structure Creator is able to develop an mADX Measure which describes the base constraints for a valid mADX data message and any required code sets for disaggregation dimensions of the reported values. 
+The Content Data Structure Creator is able to develop a mADX Measure which describes the base constraints for a valid mADX data message and any required code sets for disaggregation dimensions of the reported values. 
 
 ### Content Data Structure Consumer
 The Content Data Structure Consumer is able to request a HL7 FHIR Measure that is conformant to mADX from a Content Data Structure Consumer using the  Retrieve Aggregate Report Definition [QRPH-59].
@@ -35,19 +35,19 @@ The Content Consumer is able to process a data stream that is conformant to the 
 
 
 #### Test Case 1: The Content Data Structure Creator provides the normative mADX HL7 FHIR Measure Resource
-GIVEN that the Content Data Structure Creator has the authority to develop a normative mADX HL7 FHIR Measure Resource and the Content Data Structure Consumer already has a business identifier for the Measure they are interested in
+GIVEN that the Content Data Structure Creator has the authority to develop a normative mADX HL7 FHIR Measure resource and the Content Data Structure Consumer already has a business identifier for the Measure they are interested in
 WHEN the Content Data Structure Consumer requests a specific mADX Measure by executing a Retrieve Aggregate Report Definition [QRPH-59]  
 THEN the Content Data Structure Creator is able to provide the requested mADX Measure
 
 
 #### Test Case 2: The Content Creator sends a report with invalid terminology code
-GIVEN that the Content Creator is able to create reports, containing aggregate health data, based on a normative mADX HL7 FHIR Measure Resource
+GIVEN that the Content Creator is able to create reports, containing aggregate health data, based on a normative mADX HL7 FHIR Measure resource
 WHEN the Content Creator transmits a Send Aggregate Report request message that contains invalid terminology codes
 THEN the Content Consumer responds with an appropriate HTTP status code
 
 
 #### Test Case 3: The Content Creator sends a report with invalid reporting location
-GIVEN that the Content Creator is able to create reports, containing aggregate health data, based on a normative mADX HL7 FHIR Measure Resource
+GIVEN that the Content Creator is able to create reports, containing aggregate health data, based on a normative mADX HL7 FHIR Measure resource
 WHEN the Content Creator transmits a Send Aggregate Report request message that contains an invalid reporting location ID
 THEN the Content Consumer responds with an appropriate HTTP status code
 

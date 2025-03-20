@@ -1,0 +1,50 @@
+Alias: $resource-types = http://hl7.org/fhir/resource-types
+Alias: $madx = http://ihe.net/qrph/madx/
+Alias: $measure-scoring = http://terminology.hl7.org/CodeSystem/measure-scoring
+Alias: $measure-population = http://terminology.hl7.org/CodeSystem/measure-population
+Alias: $hiv-stratifiers-example = http://ihe.net/qrph/madx/hiv-stratifiers-example
+
+Instance: madx-hiv-indicator-example
+InstanceOf: IHEmADXMeasure
+Usage: #example
+* url = "http://ohie.org/Measure/madx-hiv-indicator-example"
+* identifier.system = "http://ohie.org/Measure/"
+* identifier.value = "madx-hiv-indicator-example"
+* version = "0.0.1"
+* name = "HIVInd21example"
+* title = "mADX-Measure-example"
+* status = #draft
+* experimental = true
+* publisher = "ohie.org"
+* description = "Example indicator supporting mADX implementation of the IHE mADXMeasure profile"
+* subjectCodeableConcept = $resource-types#Location
+* date = "2024-08-02"
+* relatedArtifact[0].label = "ageGroup"
+* relatedArtifact[0].url = "http://ohie.org/CodeSystem/iso-8601-derived-periods"
+* relatedArtifact[0].type = #depends-on
+* relatedArtifact[1].label = "gender"
+* relatedArtifact[1].url = "http://hl7.org/fhir/administrative-gender"
+* relatedArtifact[1].type = #depends-on
+* relatedArtifact[2].label = "TBdiagnosisResult"
+* relatedArtifact[2].url = "http://ihe.net/qrph/madx/TBdiagnosisResult-stratifiers-example"
+* relatedArtifact[2].type = #depends-on
+* scoring = $measure-scoring#cohort
+* group.id = "group-id"
+* group.code = $madx#QRPH_mADX_ART1_N
+* group.description = "% of people newly diagnosed with HIV initiated on ART"
+* group.population.id = "group-population-id"
+* group.population.code = $measure-population#initial-population
+* group.population.description = "Number of people newly diagnosed with HIV and started on ART during the reporting period"
+* group.population.criteria.language = #text/cql
+* group.population.criteria.expression = "Numerator_expression"
+* group.stratifier[0].id = "group-stratifier1-id"
+* group.stratifier[0].component[0].code = $hiv-stratifiers-example#ageGroup
+* group.stratifier[0].component[0].criteria.language = #text/cql
+* group.stratifier[0].component[0].criteria.expression = "ageGroup_expression"
+* group.stratifier[0].component[1].code = $hiv-stratifiers-example#gender
+* group.stratifier[0].component[1].criteria.language = #text/cql
+* group.stratifier[0].component[1].criteria.expression = "gender_expression"
+* group.stratifier[1].id = "group-stratifier2-id"
+* group.stratifier[1].component[0].code = $hiv-stratifiers-example#TBdiagnosisResult
+* group.stratifier[1].component[0].criteria.language = #text/cql
+* group.stratifier[1].component[0].criteria.expression = "TBdiagnosisResult_expression"
