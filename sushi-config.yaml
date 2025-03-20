@@ -36,7 +36,7 @@ dependencies:
     version: 1.0.0
     # This IG uses content management profiles and capabilities provided by the Canonical Resource Management Infrastructure (CRMI) IG
   hl7.fhir.us.ndh: 
-    version: 1.0.0
+    version: 1.0.0-ballot
     uri: http://hl7.org/fhir/us/ndh/ImplementationGuide/hl7.fhir.us.ndh
     # This IG uses only a codeSystem defined in here for examples.
 
