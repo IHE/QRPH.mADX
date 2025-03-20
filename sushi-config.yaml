@@ -74,7 +74,7 @@ pages:
     title: 2:3.59 Retrieve Aggregate Report Definition [QRPH-59]
     generation: markdown
   volume-3.md:
-    title: Content Modules
+    title: Mobile Aggregate Data Exchange (mADX) Content
     generation: markdown
   testplan.md:
     title: Test Plan
