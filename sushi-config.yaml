@@ -62,10 +62,10 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
 pages:
 # itemize here each narrative page. Include assigned section numbers when appropriate. The order they appear here is the order they will appear in the TOC and on the next/prev navigation.
   index.md:
-    title: Mobile Aggregate Data Exchange (mADX)
+    title: Mobile Aggregate Data Exchange (mADX) Home
     generation: markdown
   volume-1.md:
-    title: 1:06 Mobile Aggregate Data Exchange (mADX) Volume 1
+    title: 1:06 Mobile Aggregate Data Exchange (mADX)
     generation: markdown
   QRPH-58.md:
     title: 2:3.58 Send Aggregate Report [QRPH-58]
@@ -73,14 +73,8 @@ pages:
   QRPH-59.md:
     title: 2:3.59 Retrieve Aggregate Report Definition [QRPH-59]
     generation: markdown
-  volume-3.md:
-    title: 3:06 Mobile Aggregate Data Exchange (mADX) Volume 3
-    generation: markdown
-  volume-4.md:
-    title: 4:06 Mobile Aggregate Data Exchange (mADX) Volume 4
-    generation: markdown
   testplan.md:
-    title: mADX Test Plan
+    title: Test Plan
     generation: markdown
   other.md:
     title: Changes to Other IHE Specifications
@@ -89,11 +83,11 @@ pages:
     title: Download and Analysis
     generation: markdown
   issues.md:
-    title: mADX Open and Closed Issues
+    title: Significant Changes and Issues
     generation: markdown
 
 menu:
-  Home: index.html
+  mADX Home: index.html
   Volume 1:
     Introduction: volume-1.html
     Actors, Transactions and Content Modules: volume-1.html#actors-transactions-content-modules
@@ -107,8 +101,6 @@ menu:
     "Retrieve Aggregate Report Definition [QRPH-59]": QRPH-59.html
   Volume 3:
     "Content Modules": volume-3.html
-  Volume 4:
-    "National Extensions": volume-4.html
   Artifacts: artifacts.html
   Other:
     Changes to Other IHE Specifications: other.html
