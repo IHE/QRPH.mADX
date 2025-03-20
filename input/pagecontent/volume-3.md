@@ -45,7 +45,7 @@ This section defines Content Modules for the mobile Aggregate Data Exchange (mAD
 A Content Data Structure Creator creates mADX-conformant Measure and schema streams. Typically, the mADX Content Data Structure Creator will be an implementing jurisdiction such as a ministry of health, a global non-government organization (NGO) or a donor.
 
 - An mADX compliant Measure is a profile of the HL7 FHIR Measure, as described in Section 8.2.
-- The mADXMeasure depends on the [CRMIShareableMeasure](http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablemeasure) profile because both apply similar constraints that enforce a minimum information set for the measure metadata required by HL7 and other organizations that share and publish measures.
+- The mADXMeasure depends on the [CRMIShareableMeasure]({{site.data.fhir.crmi}}StructureDefinition/crmi-shareablemeasure) profile because both apply similar constraints that enforce a minimum information set for the measure metadata required by HL7 and other organizations that share and publish measures.
 - mADX Content data messages can be validated using valuesets from the HL7 FHIR Terminology Service.
 
 Content Creators and Content Consumers exchange a data payload that conforms to the mADX compliant resources. A sample mADX compliant data payload is provided in the informative Appendix 8C.

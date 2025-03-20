@@ -8,8 +8,8 @@
 
 Whenever possible, IHE profiles are based on established and stable underlying standards. However, if an IHE domain determines that an emerging standard has high likelihood of industry adoption, and the standard offers significant benefits for the use cases it is attempting to address, the domain may develop IHE profiles based on such a standard. During Trial Implementation, the IHE domain will update and republish the IHE profile as the underlying standard evolves.
 Product implementations and site deployments may need to be updated in order for them to remain interoperable and conformant with an updated IHE profile.
-This mADX Profile incorporates content from Release 4 of the HL7 FHIR specification. HL7 describes FHIR Change Management and Versioning at https://www.hl7.org/fhir/versions.html.
-HL7 provides a rating of the maturity of FHIR content based on the FHIR Maturity Model (FMM): level 0 (draft) through N (Normative). See http://hl7.org/fhir/versions.html#maturity. 
+This mADX Profile incorporates content from Release 4 of the HL7 FHIR specification. HL7 describes FHIR Change Management and Versioning at {{site.data.fhir.path}}versions.html.
+HL7 provides a rating of the maturity of FHIR content based on the FHIR Maturity Model (FMM): level 0 (draft) through N (Normative). See {{site.data.fhir.path}}versions.html#maturity. 
 
 The FMM levels for FHIR content used in this profile are:
 

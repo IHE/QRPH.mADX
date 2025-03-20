@@ -4,16 +4,16 @@
 # e.g. ihe.iti.mhds, or ihe.iti.basicaudit
 id: ihe.qrph.madx
 canonical: https://profiles.ihe.net/QRPH/mADX
-version: 0.0.1-current
+version: 3.0.0-comment
 name: IHE_QRPH_mADX
 title: "Mobile Aggregate Data Exchange"
 description: The Mobile Aggregate Data Exchange (mADX) Profile supports interoperable public health reporting of aggregate health data. These most typically take the form of routine reports (weekly, monthly, quarterly etc.) from a health facility to some administrative jurisdiction such as a health district, though there are numerous other use cases such as international reporting and community health worker reporting.
-releaseLabel: ci-build
-#releaseLabel: ballot
+#releaseLabel: ci-build
+releaseLabel: ballot
 #releaseLabel: trial-use
 #releaseLabel: release
-#date: 2022-01-02
-status: draft
+date: 2025-03-25
+status: active
 publisher:
   ## Find your domain contact on the https://www.ihe.net/ihe_domains page
   - name: IHE QRPH Technical Committee
@@ -31,10 +31,15 @@ jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#001'
 copyrightYear: 2021+
 
 dependencies:
- hl7.fhir.uv.crmi:
+  hl7.fhir.uv.crmi:
     id: crmi
     version: 1.0.0
-    reason: This IG uses content management profiles and capabilities provided by the Canonical Resource Management Infrastructure (CRMI) IG
+    # This IG uses content management profiles and capabilities provided by the Canonical Resource Management Infrastructure (CRMI) IG
+  hl7.fhir.us.ndh: 
+    version: 1.0.0
+    uri: http://hl7.org/fhir/us/ndh/ImplementationGuide/hl7.fhir.us.ndh
+    # This IG uses only a codeSystem defined in here for examples.
+
 
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   path-resource:
