@@ -65,7 +65,7 @@ pages:
     title: Mobile Aggregate Data Exchange (mADX) Home
     generation: markdown
   volume-1.md:
-    title: 1:06 Mobile Aggregate Data Exchange (mADX)
+    title: 1:6 Mobile Aggregate Data Exchange (mADX)
     generation: markdown
   QRPH-58.md:
     title: 2:3.58 Send Aggregate Report [QRPH-58]
