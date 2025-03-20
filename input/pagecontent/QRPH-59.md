@@ -22,8 +22,8 @@ The roles in this transaction are defined in the following table and may be play
 | [Content Data Structure Consumer](volume-1.html#ContentDataStructureConsumer) | A Content Data Structure Consumer is responsible for receiving the Measure Resource and validating its mADX messages.|
 
 ### 3.59.3 Referenced Standards
--  [HL7 FHIR R4](http://hl7.org/fhir/R4)
-	- [FHIR Measure ](https://hl7.org/fhir/R4/measure.html)
+-  [HL7 FHIR R4]({{site.data.fhir.path}})
+	- [FHIR Measure]({{site.data.fhir.path}}measure.html)
 
 ### 3.59.4 Messages
 
@@ -36,7 +36,7 @@ The roles in this transaction are defined in the following table and may be play
 #### 3.59.4.1 Retrieve Aggregate Report Definition Request Message
 
 This transaction facilitates the Content Data Structure Consumer  requesting an mADX Measure from a Content Data Structure Creator. The Measure MAY be used by the Content Data Structure Consumer to validate their mADX messages upon receipt. 
-The Retrieve Aggregate Report Definition [QRPH-59] is implemented as a FHIR Read transaction defined in the RESTful API implementation guide: https://www.hl7.org/fhir/http.html#read.
+The Retrieve Aggregate Report Definition [QRPH-59] is implemented as a FHIR Read transaction defined in the RESTful API implementation guide: {{site.data.fhir.path}}http.html#read.
 
 
 ##### 3.59.4.1.1 Trigger Events
@@ -59,7 +59,7 @@ The Content Data Structure Consumer **SHALL** send a request for a given Measure
 #### 3.59.4.2 Retrieve Aggregate Report Definition Response Message
 This transaction responds to the Content Data Structure Consumer requesting an mADX Measure from a Content Data Structure Creator. The Measure **SHALL** be used by the Content Data Structure Consumer to validate their mADX messages upon receipt.
 
-The Retrieve Aggregate Report Definition [QRPH-59] is implemented as a FHIR Read transaction defined in the RESTful API implementation guide: https://www.hl7.org/fhir/http.html#read.
+The Retrieve Aggregate Report Definition [QRPH-59] is implemented as a FHIR Read transaction defined in the RESTful API implementation guide: {{site.data.fhir.path}}http.html#read.
 
 An example Measure is provided in the "Artifacts" page of this profile.
 
