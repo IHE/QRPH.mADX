@@ -48,12 +48,10 @@ This guide is organized into the following sections:
    1. [Retrieve Aggregate Report Definition [QRPH-59]](QRPH-59.html)
 3. Volume 3: Metadata and Content
    1. [Content Modules](volume-3.html)
-4. Volume 4: National Extensions
-   1. [National Extensions](volume-4.html)
-5. Other
-   1. [Test Plan](testplan.html)
+4. Other
    1. [Changes to Other IHE Specifications](other.html)
    1. [Download and Analysis](download.html)
+   1. [Test Plan](testplan.html)
 
 See also the [Table of Contents](toc.html) and the index of [Artifacts](artifacts.html) defined as part of this implementation guide.
 
