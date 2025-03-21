@@ -20,6 +20,7 @@ The roles in this transaction are defined in the following table and may be play
 |-------------------|--------------------------|
 | [Content Data Structure Creator](volume-1.html#ContentDataStructureCreator)    | The Content Data Structure Creator is responsible for the creation of a Measure Resource, which a given mADX message SHALL conform.|
 | [Content Data Structure Consumer](volume-1.html#ContentDataStructureConsumer) | A Content Data Structure Consumer is responsible for receiving the Measure Resource and validating its mADX messages.|
+{: .grid .table-striped}
 
 ### 2:3.59.3 Referenced Standards
 -  [HL7 FHIR R4]({{site.data.fhir.path}})
@@ -52,6 +53,7 @@ A Content Data Structure Consumer sends a Retrieve Aggregate Report Definition [
 | URL | The mADX Profile does not prescribe the form of the URL to be advertised by a Content Data Structure Creator except that the scheme of the URL SHALL be “https”. |
 | Headers |The Read request SHALL contain a Content-type header identifying the payload <br> - Type:Content-type: application/ fhir+xml <br>- Type:Content-type: application/fhir+json <br> The request MAY contain any additional headers. For example, a Content Data Structure Creator may require an Authorization header.|
 | BODY | The body of an mADX Retrieve Aggregate Report Definition request SHALL contain the ID of the resource. |
+{: .grid .table-striped}
 
 ##### 2:3.59.4.1.3 Expected Actions
 
@@ -87,6 +89,7 @@ The Content Data Structure Creator **SHALL** conform to HTTPS standards and resp
 | 415 | Unsupported content-type or media |
 | 422 | Unprocessable entity - The referenced Indicator Report/Measure resource does not adhere to the message semantics of a Retrieve Aggregate Report Definition [QRPH-59] transaction. |
 | 501 | The request method is not implemented. |
+{: .grid .table-striped}
 
 The HL7 FHIR Measure response **SHALL** contain the following elements:
 
