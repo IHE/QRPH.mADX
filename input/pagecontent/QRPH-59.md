@@ -16,7 +16,7 @@ The roles in this transaction are defined in the following table and may be play
 
 <p id ="t3.59.2-1" class="tableTitle"><strong>Table 2:3.59.2-1: Actor Roles</strong></p>
 
-|Actor | Role |
+| Actor | Role |
 |-------------------|--------------------------|
 | [Content Data Structure Creator](volume-1.html#ContentDataStructureCreator)    | The Content Data Structure Creator is responsible for the creation of a Measure Resource, which a given mADX message SHALL conform.|
 | [Content Data Structure Consumer](volume-1.html#ContentDataStructureConsumer) | A Content Data Structure Consumer is responsible for receiving the Measure Resource and validating its mADX messages.|
@@ -47,8 +47,8 @@ A Content Data Structure Consumer sends a Retrieve Aggregate Report Definition [
 
 <p id ="t3.59.4.1.2-1" class="tableTitle"><strong>Table 2:3.59.4.1.2-1: Messaging Semantics for Retrieve Aggregate Report Definition Request Message</strong></p>
 
-|  | Description |
-|----| ----|
+|         |      Description    |
+|-------------|----------------|
 | URL | The mADX Profile does not prescribe the form of the URL to be advertised by a Content Data Structure Creator except that the scheme of the URL SHALL be “https”. |
 | Headers |The Read request SHALL contain a Content-type header identifying the payload <br> - Type:Content-type: application/ fhir+xml <br>- Type:Content-type: application/fhir+json <br> The request MAY contain any additional headers. For example, a Content Data Structure Creator may require an Authorization header.|
 | BODY | The body of an mADX Retrieve Aggregate Report Definition request SHALL contain the ID of the resource. |
@@ -75,7 +75,7 @@ The Content Data Structure Creator **SHALL** conform to HTTPS standards and resp
 <p id ="t3.59.4.2.2-1" class="tableTitle"><strong>Table 2:3.59.4.2.2-1: Retrieve Aggregate Report Definition Response Message status codes</strong></p>
 
 | HTTP status code | Interpretation |
-| ---- | ---- |
+|------------|--------------|
 | 200 | Retrieve Aggregate Report Definition request was successfully processed |
 | 202 | Retrieve Aggregate Report Definition request has been accepted for processing, but the processing has not been completed. The request might or might not be eventually acted upon, and may be disallowed when processing occurs.|
 | 303 | The response to the Retrieve Aggregate Report Definition request, when the task is complete, can be retrieved from another URL. When received in response to a Retrieve Aggregate Report Definition  request, the client should presume that the server has received the data and should issue a redirect with a separate GET message.|
