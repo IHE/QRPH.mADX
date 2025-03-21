@@ -6,6 +6,18 @@
 
 ### Introduction to This Supplement
 
+Whenever possible, IHE profiles are based on established and stable underlying standards. However, if an IHE domain determines that an emerging standard has high likelihood of industry adoption, and the standard offers significant benefits for the use cases it is attempting to address, the domain may develop IHE profiles based on such a standard. During Trial Implementation, the IHE domain will update and republish the IHE profile as the underlying standard evolves.
+Product implementations and site deployments may need to be updated in order for them to remain interoperable and conformant with an updated IHE profile.
+This mADX Profile incorporates content from Release 4 of the HL7 FHIR specification. HL7 describes FHIR Change Management and Versioning at {{site.data.fhir.path}}versions.html.
+HL7 provides a rating of the maturity of FHIR content based on the FHIR Maturity Model (FMM): level 0 (draft) through N (Normative). See {{site.data.fhir.path}}versions.html#maturity. 
+
+The FMM levels for FHIR content used in this profile are:
+
+| FHIR Content (Resources, ValueSets, etc.) | FMM Level |
+| --- | --- |
+| Measure | 2 |
+| MeasureReport | 2 |
+
 The Mobile Aggregate Data Exchange (mADX) Profile supports interoperable public health reporting of aggregate health data. These most typically take the form of routine reports (weekly, monthly, quarterly etc.) from a health facility to some administrative jurisdiction such as a health district, though there are numerous other use cases such as international reporting and community health worker reporting.
 
 As the motivating context and use cases for this profile are the same as the Aggregate Data Exchange (ADX) Profile, they are not repeated here. The mADX and ADX file are intended to be functionally equivalent.

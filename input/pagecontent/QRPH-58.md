@@ -23,8 +23,8 @@ The roles in this transaction are defined in the following table and may be play
 {: .grid .table-striped}
 
 ### 2:3.58.3 Referenced Standards
--  [HL7 FHIR R4](http://hl7.org/fhir/R4)
-	- [FHIR MeasureReport](https://hl7.org/fhir/R4/measurereport.html)
+-  [HL7 FHIR R4]({{site.data.fhir.path}})
+	- [FHIR MeasureReport]({{site.data.fhir.path}}measurereport.html)
 
 ### 2:3.58.4 Messages
 
@@ -38,7 +38,7 @@ The roles in this transaction are defined in the following table and may be play
 
 This transaction transmits mADX-conformant messages containing aggregate health data from the Content Creator to the Content Consumer. A Content Consumer implemented at a jurisdiction may receive this transaction from multiple Content Creators.
 
-The Send Aggregate Report is implemented as a FHIR Update Transaction defined in the RESTful API implementation guide: [https://www.hl7.org/fhir/http.html#update](https://www.hl7.org/fhir/http.html#update).
+The Send Aggregate Report is implemented as a FHIR Update Transaction defined in the RESTful API implementation guide: [{{site.data.fhir.path}}http.html#update]({{site.data.fhir.path}}http.html#update).
 
 ##### 2:3.58.4.1.1 Trigger Events
 
@@ -83,7 +83,7 @@ The implementer **MUST SUPPORT** the following elements, needed for representing
 The Content Consumer **SHALL** process the mADX message received and return the status of the transaction as per section 2:3.58.4.2. .
 
 ##### 2:3.58.4.1.4 Send Aggregate Report Bundle Message
-A Content Creator may submit multiple Measures using a Collection Bundle in FHIR in a single transaction. This option can be valuable in use cases where the system may not have constant connection. (See  [https://www.hl7.org/fhir/bundle.html](https://www.hl7.org/fhir/bundle.html).)
+A Content Creator may submit multiple Measures using a Collection Bundle in FHIR in a single transaction. This option can be valuable in use cases where the system may not have constant connection. (See  [{{site.data.fhir.path}}bundle.html]({{site.data.fhir.path}}bundle.html).)
 
 #### 2:3.58.4.2 Send Aggregate Report Response Message
 This transaction is an acknowledgement of mADX POST Content transaction from the Content Consumer to the Content Creator.
@@ -98,7 +98,7 @@ A Content Consumer sends a Send Aggregate Report Response Message after receivin
 
 The Send Aggregate Report Response Message is implemented as an HTTP Response. The response may include content in the body to provide an implementation and jurisdiction specific informative message on the completed status of the transaction. The response shall contain an HTTP status code. The table below describes the codes which may be produced by the Content Consumer which have a specific meaning related to the transaction.
 
-Note that a Content Creator should be prepared to handle additional status codes not particular to the transaction, such as authorization, server or network error codes. HTTP status codes correspond to FHIR HTTP 3.1.0.4.2 Rejecting Updates ([https://www.hl7.org/fhir/http.html#rejecting-updates](https://www.hl7.org/fhir/http.html#rejecting-updates)).
+Note that a Content Creator should be prepared to handle additional status codes not particular to the transaction, such as authorization, server or network error codes. HTTP status codes correspond to FHIR HTTP 3.1.0.4.2 Rejecting Updates ([{{site.data.fhir.path}}http.html#rejecting-updates]({{site.data.fhir.path}}http.html#rejecting-updates)).
 
 <p id ="t3.58.4.2.2-1" class="tableTitle">Table 2:3.58.4.2.2-1: Send Aggregate Report Response Message status codes<strong></p>
 
