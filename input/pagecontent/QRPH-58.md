@@ -51,8 +51,8 @@ The Content Creator creates an mADX conformant message containing aggregate heal
 The table below describes the request.
 <p id ="t3.58.4.1.2-1" class="tableTitle"><strong>Table 2:3.58.4.1.2-1: Messaging Semantics for Send Aggregate Report Request Message</strong></p>
 
-|  | Description |  |
-|--------|---------|--------------|
+|  | Description |
+|--------|---------|
 | URL | The mADX Profile does not prescribe the form of the URL to be advertised by a Content Consumer except that the scheme of the URL **SHALL** be “https”.<br>The following is a non-exhaustive list of valid examples:<br>·       https://hmis.gov.rw/datasets/mADX <br>·       https://hmis.gov.rw/routinereports/mADX <br>·       https://hmis.gov.rw/routinereports <br> Note: These links are served only as examples. They do not point to real addresses.|
 | Headers | The **Update** request **SHALL** contain a Content-type header identifying the payload<br>·       Type:Content-type: application/fhir+xml<br>·       Type:Content-type: application/fhir+json<br>The request **MAY** contain any additional headers. For example, a Content Consumer may require an Authorization header. |
 |  | A Content Consumer **MAY** support additional parameters. |
@@ -102,8 +102,8 @@ Note that a Content Creator should be prepared to handle additional status codes
 
 <p id ="t3.58.4.2.2-1" class="tableTitle"><strong>Table 2:3.58.4.2.2-1: Send Aggregate Report Response Message status codes</strong></p>
 
-| HTTP status code | Interpretation |  |
-| --- | --- | --- |
+| HTTP status code | Interpretation |
+| ---- | ---- |
 | 200 | Send Aggregate Report request message was successfully processed |
 | 202 | Send Aggregate Report request message has been accepted for processing, but the processing has not been completed. The request might or might not be eventually acted upon, and may be disallowed when processing occurs. |
 | 303 | The response to the Send Aggregate Report request message, when the task is complete, can be retrieved from another URL. When received in response to a Send Aggregate Report request message, the client should presume that the server has received the data and should issue a redirect with a separate GET message. |
