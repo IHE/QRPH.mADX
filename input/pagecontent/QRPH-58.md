@@ -115,6 +115,7 @@ Note that a Content Creator should be prepared to handle additional status codes
 | 415 | Unsupported content-type or media |
 | 422 | Unprocessable entity - The MeasureReport does not adhere to mADX Profile on the required fields, etc. |
 | 501 | The request method is not implemented. |
+{: .grid .table-striped}
 
 ##### 2:3.58.4.2.3 Expected Actions
 

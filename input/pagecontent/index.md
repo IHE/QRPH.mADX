@@ -17,6 +17,7 @@ The FMM levels for FHIR content used in this profile are:
 | --- | --- |
 | Measure | 2 |
 | MeasureReport | 2 |
+{: .grid .table-striped}
 
 The Mobile Aggregate Data Exchange (mADX) Profile supports interoperable public health reporting of aggregate health data. These most typically take the form of routine reports (weekly, monthly, quarterly etc.) from a health facility to some administrative jurisdiction such as a health district, though there are numerous other use cases such as international reporting and community health worker reporting.
 
