@@ -4,7 +4,7 @@
 
 </div>
 
-### Introduction to this Supplement
+### Introduction to This Supplement
 
 Whenever possible, IHE profiles are based on established and stable underlying standards. However, if an IHE domain determines that an emerging standard has high likelihood of industry adoption, and the standard offers significant benefits for the use cases it is attempting to address, the domain may develop IHE profiles based on such a standard. During Trial Implementation, the IHE domain will update and republish the IHE profile as the underlying standard evolves.
 Product implementations and site deployments may need to be updated in order for them to remain interoperable and conformant with an updated IHE profile.
@@ -22,7 +22,7 @@ The Mobile Aggregate Data Exchange (mADX) Profile supports interoperable public 
 
 As the motivating context and use cases for this profile are the same as the Aggregate Data Exchange (ADX) Profile, they are not repeated here. The mADX and ADX file are intended to be functionally equivalent.
 
-**Difference from existing ADX Profile**
+**Difference From the Existing ADX Profile**
 
 The primary purpose of the mADX Profile is to provide an alternative for the exchange and management of the metadata required for routine reporting by replacing the use of SDMX with HL7 FHIR. Metadata data in ADX, or ADX/DSD, is a profile of the SDMX Data Structure Definition (DSD). Challenges in working with it include:
 
@@ -30,7 +30,7 @@ The primary purpose of the mADX Profile is to provide an alternative for the exc
 - Bandwidth limitations when trying to transfer an ADX/DSD for validation of an ADX. Facility and location lists can be large which complicates deployments in resource constrained settings.
 - Management and exchange of code lists for disaggregators.
 
-mADX profiles HL7 FHIR Measure and MeasureReport resources. Additionally, this profile makes use of the Mobile Care Services Discovery (mCSD) Profile for facility and location data and the Sharing Valuesets and Codes Maps (SVCM) Profile for terminology meta data.  The mADX Profile will allow vendors and implementers to utilize the robust ecosystem of tools around HL7 FHIR and promote standards-based routine reporting.
+mADX profiles HL7 FHIR Measure and MeasureReport resources. Additionally, this profile makes use of the Mobile Care Services Discovery (mCSD) Profile for facility and location data and the Sharing Valuesets and Codes Maps (SVCM) Profile for terminology meta data. The mADX Profile will allow vendors and implementers to utilize the robust ecosystem of tools around HL7 FHIR and promote standards-based routine reporting.
 
 **Approach**
 
@@ -60,34 +60,22 @@ This guide is organized into the following sections:
    1. [Retrieve Aggregate Report Definition [QRPH-59]](QRPH-59.html)
 3. Volume 3: Metadata and Content
    1. [Content Modules](volume-3.html)
-4. Volume 4: National Extensions
-   1. [National Extensions](volume-4.html)
-5. Other
-   1. [Test Plan](testplan.html)
+4. Other
    1. [Changes to Other IHE Specifications](other.html)
    1. [Download and Analysis](download.html)
+   1. [Test Plan](testplan.html)
 
 See also the [Table of Contents](toc.html) and the index of [Artifacts](artifacts.html) defined as part of this implementation guide.
 
 ### Conformance Expectations
 
-IHE uses the normative words: Shall, Should, and May according to [standards conventions](https://profiles.ihe.net/GeneralIntro/ch-E.html).
+IHE uses the normative words: “REQUIRED”, “REQUIRED NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” according to [standards conventions](https://profiles.ihe.net/GeneralIntro/ch-E.html).
 
-#### Must Support
+#### Required Support
 
-The use of ```mustSupport``` in StructureDefinition profiles equivalent to the IHE use of **R2** as defined in [Appendix Z](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.10-profiling-conventions-for-constraints-on-fhir).
+The use of ```RequiredSupport``` in StructureDefinition profiles equivalent to the IHE use of **R2** as defined in [Appendix Z](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.10-profiling-conventions-for-constraints-on-fhir).
 
-mustSupport of true - only has a meaning on items that are minimal cardinality of zero (0), and applies only to the source actor populating the data. The source actor shall populate the elements marked with MustSupport, if the concept is supported by the actor, a value exists, and security and consent rules permit.
-The consuming actors should handle these elements being populated or being absent/empty.
-Note that sometimes mustSupport will appear on elements with a minimal cardinality greater than zero (0), this is due to inheritance from a less constrained profile.
+RequiredSupport of true - only has a meaning on items that are minimal cardinality of zero (0), and applies only to the source actor populating the data. The source actor SHALL populate the elements marked with RequiredSupport, if the concept is supported by the actor, a value exists, and security and consent rules permit. 
+The consuming actors SHOULD handle these elements being populated or being absent/empty. 
+Note that sometimes RequiredSupport will appear on elements with a minimal cardinality greater than zero (0), this is due to inheritance from a less constrained profile.
 
-### IHE Technical Frameworks General Introduction
-The [IHE Technical Framework General Introduction](https://profiles.ihe.net/GeneralIntro) is shared by all of the IHE domain technical frameworks. Each technical framework volume contains links to this document where appropriate.
-
-#### Copyright Licenses
-
-IHE technical documents refer to, and make use of, a number of standards developed and published by several standards development organizations. Please refer to the IHE Technical Frameworks General Introduction, [Chapter 9 - Copyright Licenses](https://profiles.ihe.net/GeneralIntro/ch-9.html) for copyright license information for frequently referenced base standards. Information pertaining to the use of IHE International copyrighted materials is also available there.
-
-#### Trademark
-
-IHE® and the IHE logo are trademarks of the Healthcare Information Management Systems Society in the United States and trademarks of IHE Europe in the European Community. Please refer to the IHE Technical Frameworks General Introduction, [Chapter 10 - Trademark](https://profiles.ihe.net/GeneralIntro/ch-10.html) for information on their use.
