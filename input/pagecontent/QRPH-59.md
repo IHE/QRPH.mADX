@@ -107,10 +107,10 @@ The HL7 FHIR Measure response **SHALL** contain the following elements:
 
 The HL7 FHIR Measure response **SHALL** contain the following additional elements if the indicator includes disaggregation criteria: 
 
-- `relatedArtifact[]` There should be a related artifact for each dissagregation set defined under ```group[].stratifier[].code```.
+- `relatedArtifact[]` There should be a related artifact for each disaggregation set defined under `group[].stratifier[].code`.
 - `realatedArtifact[].type` Should be set to “depends-on”.
-- `relatedArtifact[].label` The label should match one of the values of ```group[].stratifier[].code``` for a disaggregation value set.
-- `relatedArtifact[].url` The URL of a FHIR Valueset that defines the valid values reported in this disaggregation component as cross-referenced by ```relatedArtifact[].label```.
+- `relatedArtifact[].label` The label should match one of the values of `group[].stratifier[].code` for a disaggregation value set.
+- `relatedArtifact[].url` The URL of a FHIR Valueset that defines the valid values reported in this disaggregation component as cross-referenced by `relatedArtifact[].label`.
 - `group[].stratifier[]` Contains the disaggregating value sets needed for an indicator.
 - `group[].stratifier[].code` There should be a code used to reference this disaggregating valueset. There must be a relatedArtifact (see above) for each disaggregation set which is a reference to a FHIR Valueset
 
