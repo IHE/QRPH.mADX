@@ -1,11 +1,11 @@
-## 3.59 Retrieve Aggregate Report Definition [QRPH-59]
+## 2:3.59 Retrieve Aggregate Report Definition [QRPH-59]
 This section corresponds to transaction [QRPH-59] of the IHE QRPH Technical Framework. Transaction [QRPH-59] is an optional transaction used by the Content Creator and Content Consumer actors to retrieve the defined FHIR Measure, in which case both shall be grouped with a Content Data Structure Consumer, under the Validate mADX Message Option. It can be exercised as an optional validation step by implementers. 
 
-### 3.59.1 Scope
+### 2:3.59.1 Scope
 
 This transaction is used to obtain the FHIR Measure in order to structure and validate a given FHIR MeasureReport.
 
-### 3.59.2 Actor Roles
+### 2:3.59.2 Actor Roles
 <figure>
 {%include Fig3.59.2-1_QRPH-59_ActorRoles_UseCaseDiagram.svg%}
 <p id="f3.59.2-1" class="figureTitle">Figure 3.59.2-1: Use Case Diagram</p>
@@ -21,11 +21,11 @@ The roles in this transaction are defined in the following table and may be play
 | [Content Data Structure Creator](volume-1.html#ContentDataStructureCreator)    | The Content Data Structure Creator is responsible for the creation of a Measure Resource, which a given mADX message SHALL conform.|
 | [Content Data Structure Consumer](volume-1.html#ContentDataStructureConsumer) | A Content Data Structure Consumer is responsible for receiving the Measure Resource and validating its mADX messages.|
 
-### 3.59.3 Referenced Standards
+### 2:3.59.3 Referenced Standards
 -  [HL7 FHIR R4](http://hl7.org/fhir/R4)
 	- [FHIR Measure ](https://hl7.org/fhir/R4/measure.html)
 
-### 3.59.4 Messages
+### 2:3.59.4 Messages
 
 <figure>
 {%include Fig3.59.4-1_QRPH-59_RetrieveAggregateReportDefinitionSequenceDiagram.svg%}
@@ -33,17 +33,17 @@ The roles in this transaction are defined in the following table and may be play
 </figure>
 <br clear="all">
 
-#### 3.59.4.1 Retrieve Aggregate Report Definition Request Message
+#### 2:3.59.4.1 Retrieve Aggregate Report Definition Request Message
 
 This transaction facilitates the Content Data Structure Consumer  requesting an mADX Measure from a Content Data Structure Creator. The Measure MAY be used by the Content Data Structure Consumer to validate their mADX messages upon receipt. 
 The Retrieve Aggregate Report Definition [QRPH-59] is implemented as a FHIR Read transaction defined in the RESTful API implementation guide: https://www.hl7.org/fhir/http.html#read.
 
 
-##### 3.59.4.1.1 Trigger Events
+##### 2:3.59.4.1.1 Trigger Events
 
 A Content Data Structure Consumer sends a Retrieve Aggregate Report Definition [QRPH-59] as a request for a given Measure from a Content Data Structure Creator.
 
-##### 3.59.4.1.2 Message Semantics
+##### 2:3.59.4.1.2 Message Semantics
 
 <p id ="t3.59.4.1.2-1" class="tableTitle">Table 3.59.4.1.2-1: Messaging Semantics for Retrieve Aggregate Report Definition Request Message</p>
 
@@ -52,22 +52,22 @@ A Content Data Structure Consumer sends a Retrieve Aggregate Report Definition [
 | URL | The mADX Profile does not prescribe the form of the URL to be advertised by a Content Data Structure Creator except that the scheme of the URL SHALL be “https”. |
 | Headers |The Read request SHALL contain a Content-type header identifying the payload <br> - Type:Content-type: application/ fhir+xml <br>- Type:Content-type: application/fhir+json <br> The request MAY contain any additional headers. For example, a Content Data Structure Creator may require an Authorization header.|
 | BODY | The body of an mADX Retrieve Aggregate Report Definition request SHALL contain the ID of the resource. |
-##### 3.59.4.1.3 Expected Actions
+##### 2:3.59.4.1.3 Expected Actions
 
 The Content Data Structure Consumer **SHALL** send a request for a given Measure from the Content Data Structure Creator.
 
-#### 3.59.4.2 Retrieve Aggregate Report Definition Response Message
+#### 2:3.59.4.2 Retrieve Aggregate Report Definition Response Message
 This transaction responds to the Content Data Structure Consumer requesting an mADX Measure from a Content Data Structure Creator. The Measure **SHALL** be used by the Content Data Structure Consumer to validate their mADX messages upon receipt.
 
 The Retrieve Aggregate Report Definition [QRPH-59] is implemented as a FHIR Read transaction defined in the RESTful API implementation guide: https://www.hl7.org/fhir/http.html#read.
 
 An example Measure is provided in the "Artifacts" page of this profile.
 
-##### 3.59.4.2.1 Trigger Events
+##### 2:3.59.4.2.1 Trigger Events
 
 A Content Data Structure Creator  **SHALL** return a Retrieve Aggregate Report Definition Response Message if a Content Data Structure Consumer has sent a Retrieve Aggregate Report Definition Request Message.
 
-##### 3.59.4.2.2 Message Semantics
+##### 2:3.59.4.2.2 Message Semantics
 
 The Content Data Structure Creator **SHALL** conform to HTTPS standards and respond to the Retrieve Aggregate Report Definition Request Message with the appropriate status code outlined in the table below.
 
@@ -110,6 +110,6 @@ The HL7 FHIR Measure response **SHALL** contain the following additional element
 - ```group[].stratifier[]``` Contains the disaggregating value sets needed for an indicator.
 - ```group[].stratifier[].code``` There should be a code used to reference this disaggregating valueset. There must be a relatedArtifact (see above) for each disaggregation set which is a reference to a FHIR Valueset
 
-##### 3.59.4.2.3 Expected Actions
+##### 2:3.59.4.2.3 Expected Actions
 
 The Content Data Structure Creator **SHALL** return the applicable Measure in the Retrieve Aggregate Report Definition Response Message to the Content Data Structure Consumer.
