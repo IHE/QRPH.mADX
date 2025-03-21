@@ -1,4 +1,4 @@
-## 2:3.58 Send Aggregate Report [QRPH-58]
+
 This section corresponds to transaction [QRPH-58] of the IHE QRPH Technical Framework. Transaction [QRPH-58] is used by the Content Creator and Content Consumer Actors to share aggregate health data within a jurisdiction using a FHIR MeasureReport. 
 
 ### 2:3.58.1 Scope
@@ -8,13 +8,13 @@ This transaction is used to communicate aggregate health data from the Content C
 ### 2:3.58.2 Actor Roles
 <figure>
 {%include Fig3.58.2-1_QRPH-58_ActorRoles_UseCaseDiagram.svg%}
-<p id="f3.58.2-1" class="figureTitle">Figure 2:3.58.2-1: Use Case Diagram<strong></p>
+<p id="f3.58.2-1" class="figureTitle"><strong>Figure 2:3.58.2-1: Use Case Diagram</strong></p>
 </figure>
 <br clear="all">
 
 The roles in this transaction are defined in the following table and may be played by the actors shown here:
 
-<p id ="t3.58.2-1" class="tableTitle">Table 2:3.58.2-1: Actor Roles<strong></p>
+<p id ="t3.58.2-1" class="tableTitle"><strong>Table 2:3.58.2-1: Actor Roles</strong></p>
 
 | Actor | Role |
 |-------------------|--------------------------|
@@ -30,7 +30,7 @@ The roles in this transaction are defined in the following table and may be play
 
 <figure>
 {%include Fig3.58.4-1_QRPH-58_SendAggregateReportSequenceDiagram.svg%}
-<p id="f3.58.4-1" class="figureTitle">Figure 2:3.58.4-1: Send Aggregate Report Diagram<strong></p>
+<p id="f3.58.4-1" class="figureTitle"><strong>Figure 2:3.58.4-1: Send Aggregate Report Diagram</strong></p>
 </figure>
 <br clear="all">
 
@@ -49,7 +49,7 @@ There are a wide variety of implementation and jurisdiction specific events whic
 The Content Creator creates an mADX conformant message containing aggregate health data that meets the requirements of the mADX Measure in their jurisdiction. The Content Creator **MAY** send the message using Send Aggregate Report. The Content Consumer **SHALL** consume the message that meets the requirements of the mADX Measure in their jurisdiction.
 
 The table below describes the request.
-<p id ="t3.58.4.1.2-1" class="tableTitle">Table 2:3.58.4.1.2-1: Messaging Semantics for Send Aggregate Report Request Message<strong></p>
+<p id ="t3.58.4.1.2-1" class="tableTitle"><strong>Table 2:3.58.4.1.2-1: Messaging Semantics for Send Aggregate Report Request Message</strong></p>
 
 |  | Description |  |
 |--------|---------|--------------|
@@ -100,7 +100,7 @@ The Send Aggregate Report Response Message is implemented as an HTTP Response. T
 
 Note that a Content Creator should be prepared to handle additional status codes not particular to the transaction, such as authorization, server or network error codes. HTTP status codes correspond to FHIR HTTP 3.1.0.4.2 Rejecting Updates ([{{site.data.fhir.path}}http.html#rejecting-updates]({{site.data.fhir.path}}http.html#rejecting-updates)).
 
-<p id ="t3.58.4.2.2-1" class="tableTitle">Table 2:3.58.4.2.2-1: Send Aggregate Report Response Message status codes<strong></p>
+<p id ="t3.58.4.2.2-1" class="tableTitle"><strong>Table 2:3.58.4.2.2-1: Send Aggregate Report Response Message status codes</strong></p>
 
 | HTTP status code | Interpretation |  |
 | --- | --- | --- |
