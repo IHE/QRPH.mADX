@@ -4,15 +4,15 @@
 # e.g. ihe.iti.mhds, or ihe.iti.basicaudit
 id: ihe.qrph.madx
 canonical: https://profiles.ihe.net/QRPH/mADX
-version: 3.0.0-comment
+version: 3.0.0-current
 name: IHE_QRPH_mADX
 title: "Mobile Aggregate Data Exchange"
 description: The Mobile Aggregate Data Exchange (mADX) Profile supports interoperable public health reporting of aggregate health data. These most typically take the form of routine reports (weekly, monthly, quarterly etc.) from a health facility to some administrative jurisdiction such as a health district, though there are numerous other use cases such as international reporting and community health worker reporting.
-#releaseLabel: ci-build
-releaseLabel: ballot
+releaseLabel: ci-build
+#releaseLabel: ballot
 #releaseLabel: trial-use
 #releaseLabel: release
-date: 2025-03-25
+#date: 2025-03-25
 status: active
 publisher:
   ## Find your domain contact on the https://www.ihe.net/ihe_domains page
