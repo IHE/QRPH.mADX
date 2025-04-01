@@ -12,12 +12,12 @@
 - Added a dependency to the [CRMIShareableMeasure](http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablemeasure) profile to reuse already defined constraints.
 - Aligned in the specifications the message names of both transactions, to ensure consistency in naming.
 - Message semantics changes:
-	- **MeasureReport**:
-		- Deletions: ~~period~~
-		- Additions: `improvementNotation`, `group.population.code`, `group.population.count`, `group.stratifier.code`, `group.stratifier.stratum.measureScore`
-	- **Measure**:
-		- Deletions: ~~group.stratifier.component~~
-		- Additions: `improvementNotation`, `group.population.code`, `group.stratifier.code`
+    - **MeasureReport**:
+        - Deletions: period
+        - Additions: `improvementNotation`, `group.population.code`, `group.population.count`, `group.stratifier.code`, `group.stratifier.stratum.measureScore`
+    - **Measure**:
+        - Deletions: group.stratifier.component
+        - Additions: `improvementNotation`, `group.population.code`, `group.stratifier.code`, `group.stratifier.stratum.measureScore`, `group.stratifier.stratum.component`
 ",
     "changes": "issues.html",
     "title": "Mobile Aggregate Data Exchange",
