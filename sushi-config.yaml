@@ -4,16 +4,16 @@
 # e.g. ihe.iti.mhds, or ihe.iti.basicaudit
 id: ihe.qrph.madx
 canonical: https://profiles.ihe.net/QRPH/mADX
-version: 0.0.1-current
+version: 3.0.0-comment
 name: IHE_QRPH_mADX
 title: "Mobile Aggregate Data Exchange"
 description: The Mobile Aggregate Data Exchange (mADX) Profile supports interoperable public health reporting of aggregate health data. These most typically take the form of routine reports (weekly, monthly, quarterly etc.) from a health facility to some administrative jurisdiction such as a health district, though there are numerous other use cases such as international reporting and community health worker reporting.
-releaseLabel: ci-build
-#releaseLabel: ballot
+#releaseLabel: ci-build
+releaseLabel: ballot
 #releaseLabel: trial-use
 #releaseLabel: release
-#date: 2022-01-02
-status: draft
+date: 2025-03-25
+status: active
 publisher:
   ## Find your domain contact on the https://www.ihe.net/ihe_domains page
   - name: IHE QRPH Technical Committee
@@ -31,7 +31,7 @@ jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#001'
 copyrightYear: 2021+
 
 dependencies:
- hl7.fhir.uv.crmi:
+  hl7.fhir.uv.crmi:
     id: crmi
     version: 1.0.0
     reason: This IG uses content management profiles and capabilities provided by the Canonical Resource Management Infrastructure (CRMI) IG
@@ -67,10 +67,10 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
 pages:
 # itemize here each narrative page. Include assigned section numbers when appropriate. The order they appear here is the order they will appear in the TOC and on the next/prev navigation.
   index.md:
-    title: Mobile Aggregate Data Exchange (mADX)
+    title: Mobile Aggregate Data Exchange (mADX) Home
     generation: markdown
   volume-1.md:
-    title: 1:06 Mobile Aggregate Data Exchange (mADX) Volume 1
+    title: 1:6 Mobile Aggregate Data Exchange (mADX)
     generation: markdown
   QRPH-58.md:
     title: 2:3.58 Send Aggregate Report [QRPH-58]
@@ -79,13 +79,10 @@ pages:
     title: 2:3.59 Retrieve Aggregate Report Definition [QRPH-59]
     generation: markdown
   volume-3.md:
-    title: 3:06 Mobile Aggregate Data Exchange (mADX) Volume 3
-    generation: markdown
-  volume-4.md:
-    title: 4:06 Mobile Aggregate Data Exchange (mADX) Volume 4
+    title: Mobile Aggregate Data Exchange (mADX) Content
     generation: markdown
   testplan.md:
-    title: mADX Test Plan
+    title: Test Plan
     generation: markdown
   other.md:
     title: Changes to Other IHE Specifications
@@ -94,11 +91,11 @@ pages:
     title: Download and Analysis
     generation: markdown
   issues.md:
-    title: mADX Open and Closed Issues
+    title: Significant Changes and Issues
     generation: markdown
 
 menu:
-  Home: index.html
+  mADX Home: index.html
   Volume 1:
     Introduction: volume-1.html
     Actors, Transactions and Content Modules: volume-1.html#actors-transactions-content-modules
@@ -112,8 +109,6 @@ menu:
     "Retrieve Aggregate Report Definition [QRPH-59]": QRPH-59.html
   Volume 3:
     "Content Modules": volume-3.html
-  Volume 4:
-    "National Extensions": volume-4.html
   Artifacts: artifacts.html
   Other:
     Changes to Other IHE Specifications: other.html

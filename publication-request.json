@@ -1,15 +1,16 @@
 {
     "package-id": "ihe.qrph.madx",
-    "version": "1.0.0-comment",
-    "path": "https://profiles.ihe.net/QRPH/mADX/1.0.0-comment",
+    "version": "3.0.0-comment",
+    "path": "https://profiles.ihe.net/QRPH/mADX/3.0.0-comment",
     "mode": "milestone",
     "status": "ballot",
     "sequence": "Publication",
     "desc": "Public comment",
     "descmd": "### Significant Changes from Revision 2.1 (2021-10-26)
 
+- Converted the profile to IG format from PDF
 - Added a dependency to the [CRMIShareableMeasure](http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablemeasure) profile to reuse already defined constraints.
-- Aligned in the specifications the messages' names of both transactions, to ensure consistency in naming.
+- Aligned in the specifications the message names of both transactions, to ensure consistency in naming.
 - Message semantics changes:
 	- **MeasureReport**:
 		- Deletions: ~~period~~
