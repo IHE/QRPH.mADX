@@ -2,6 +2,7 @@
 
 # Build errors related to "versionAlgorithm" valueSet. This valueSet is defined in R5. An issue is active on HL7 Jira: https://jira.hl7.org/browse/FHIR-49823
 The reference http://hl7.org/fhir/ValueSet/version-algorithm could not be resolved
+The link 'version-algorithm.html' for "version-algorithm" cannot be resolved
 
 # IHE valuesets/resources that are not real valuesets/resources (those were used only for demonstration purposes)
 A definition for CodeSystem 'http://ihe.net/qrph/madx/' could not be found, so the code cannot be validated
@@ -19,9 +20,3 @@ The MeasureReport does not include a group for the group ''
 
 # Info message related to a deprecated extension. Zulip issue created: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/elementdefinition-maxValueSet.7C5.2E2.2E0.20is.20deprecated
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
-
-# do not want version specific
-WARNING: StructureDefinition/mADX-Measure: StructureDefinition.snapshot.element[8].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '5.2.0', found versions: 1.0.0, 5.1.0, 5.2.0. Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability' to 'http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability|5.2.0'
-WARNING: StructureDefinition/mADX-Measure: StructureDefinition.snapshot.element[9].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/cqf-artifactComment'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '5.2.0', found versions: 1.0.0, 5.1.0, 5.2.0. Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/cqf-artifactComment' to 'http://hl7.org/fhir/StructureDefinition/cqf-artifactComment|5.2.0'
-WARNING: StructureDefinition/mADX-Measure: StructureDefinition.snapshot.element[10].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '5.2.0', found versions: 1.0.0, 5.1.0, 5.2.0. Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm' to 'http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm|5.2.0'
-WARNING: StructureDefinition/mADX-Measure: StructureDefinition.snapshot.element[11].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '5.2.0', found versions: 5.1.0, 5.2.0. Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy' to 'http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy|5.2.0'
