@@ -60,22 +60,19 @@ The table below describes the request.
 {:.grid .table-striped}
 
 The indicator **SHALL** contain the following elements: 
-- `subject` A required subject reference
-- `improvementNotation` Indicates if the values reported indicate an improvement
-- `group.code.coding.code` A required reference for a valid indicator
-- `group.population.code` The populations in the group
-- `group.population.count` Size of the population
+- `subject` A required subject reference.
+- `group.code.coding.code` A required reference for a valid indicator.
+- `group.population.code` The population(s) in the group.
+- `group.population.count` Size of the population.
 
 The indicator **SHALL** contain the following additional elements if the indicator includes disaggregation criteria: 
+- `group.stratifier.stratum` Indicates the stratum results.
+- `group.stratifier.stratum.measureScore` The value that is reported.
+- `group.stratifier.stratum.measureScore.value` The numeric value reported in the aggregate report.
+- `group.stratifier.stratum.component.code` Represents a disaggregation dimension for the disaggregation criterion reported
+- `group.stratifier.stratum.component.value` Represents a disaggregation value for the disaggregation dimension reported
 
-- `group.stratifier.code` Indicates the disaggregation criterion
-- `group.stratifier.stratum` Indicates the stratum results
-- `group.stratifier.stratum.measureScore` The value that is reported
-- `group.stratifier.stratum.measureScore.value` The numeric value reported in the aggregate report
-
-The implementer **MUST SUPPORT** the following elements, needed for representing disaggregation criteria:
-- `group.stratifier.stratum.value` Represents a disaggregation value for the disaggregation criterion reported
-- `group.stratifier.stratum.component` Represents a disaggregation dimension for the disaggregation criterion reported
+The implementers **MUST SUPPORT** support the  element `improvementNotation` because is critical for indicating improvements for the measured values. However `improvementNotation`  is optional in the MeasureReport response message.
 
 
 ##### 2:3.58.4.1.3 Expected Actions

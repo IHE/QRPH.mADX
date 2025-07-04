@@ -6,12 +6,16 @@ The reference http://hl7.org/fhir/ValueSet/version-algorithm could not be resolv
 # IHE valuesets/resources that are not real valuesets/resources (those were used only for demonstration purposes)
 A definition for CodeSystem 'http://ihe.net/qrph/madx/' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://ihe.net/qrph/madx/hiv-stratifiers-example' could not be found, so the code cannot be validated
-The resource Measure/madx-hiv-indicator-example1 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
-The resource Measure/madx-hiv-indicator-example2 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
-The Measure 'http://ohie.org/Measure/madx-hiv-indicators-example1' could not be resolved, so no validation can be performed against the Measure
-The Measure 'http://ohie.org/Measure/madx-hiv-indicators-example2' could not be resolved, so no validation can be performed against the Measure
+The resource Measure/madx-hiv-indicator-example could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 A definition for CodeSystem 'http://ihe.net/qrph/madx/TBdiagnosisResult-stratifiers-example' could not be found, so the code cannot be validated
+A definition for CodeSystem 'http://ohie.org/CodeSystem/iso-8601-derived-periods' could not be found, so the code cannot be validated
 
+# Known warrning message related to FHIR Measure validation. An issue is active on HL7 Jira: https://jira.hl7.org/browse/FHIR-49884
+A measure group stratifier should have a code when there is more than one population
+
+# HAPI FHIR errors related to the FHIR Measure. A Github issue is active on this subject: https://github.com/hapifhir/org.hl7.fhir.core/issues/1927
+Group should have a code that matches the group population definition in the measure
+The MeasureReport does not include a group for the group ''
 
 # Info message related to a deprecated extension. Zulip issue created: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/elementdefinition-maxValueSet.7C5.2E2.2E0.20is.20deprecated
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated

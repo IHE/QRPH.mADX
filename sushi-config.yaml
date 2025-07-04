@@ -34,12 +34,12 @@ dependencies:
   hl7.fhir.uv.crmi:
     id: crmi
     version: 1.0.0
-    # This IG uses content management profiles and capabilities provided by the Canonical Resource Management Infrastructure (CRMI) IG
-  hl7.fhir.us.ndh: 
-    version: 1.0.0-ballot
-    uri: http://hl7.org/fhir/us/ndh/ImplementationGuide/hl7.fhir.us.ndh
-    # This IG uses only a codeSystem defined in here for examples.
-
+    reason: This IG uses content management profiles and capabilities provided by the Canonical Resource Management Infrastructure (CRMI) IG
+ hl7.terminology: 5.5.0
+ hl7.fhir.uv.extensions.r4: 
+    id: ext
+    version: 5.1.0
+    reason: Making this dependency more explicit
 
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   path-resource:

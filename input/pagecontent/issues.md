@@ -7,11 +7,11 @@
 - Aligned in the specifications the message names of both transactions, to ensure consistency in naming.
 - Message semantics changes:
 	- **MeasureReport**:
-		- Deletions: ~~period~~
-		- Additions: `improvementNotation`, `group.population.code`, `group.population.count`, `group.stratifier.code`, `group.stratifier.stratum.measureScore`
+		- Deletions: `period`
+		- Additions: `improvementNotation`, `group.population.code`, `group.population.count`, `group.stratifier.stratum.measureScore`
+		- Updates: `subject`- updated the functional definition. The old definition suggested that the subject is always a `Location`.
 	- **Measure**:
-		- Deletions: ~~group.stratifier.component~~
-		- Additions: `improvementNotation`, `group.population.code`, `group.stratifier.code`
+		- Additions: `improvementNotation`, `group.population.code`
 
 ## Issues
 
