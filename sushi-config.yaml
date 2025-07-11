@@ -4,15 +4,15 @@
 # e.g. ihe.iti.mhds, or ihe.iti.basicaudit
 id: ihe.qrph.madx
 canonical: https://profiles.ihe.net/QRPH/mADX
-version: 3.0.0-comment
+version: 3.0.0
 name: IHE_QRPH_mADX
 title: "Mobile Aggregate Data Exchange"
 description: The Mobile Aggregate Data Exchange (mADX) Profile supports interoperable public health reporting of aggregate health data. These most typically take the form of routine reports (weekly, monthly, quarterly etc.) from a health facility to some administrative jurisdiction such as a health district, though there are numerous other use cases such as international reporting and community health worker reporting.
 #releaseLabel: ci-build
-releaseLabel: ballot
-#releaseLabel: trial-use
+#releaseLabel: ballot
+releaseLabel: trial-use
 #releaseLabel: release
-date: 2025-03-25
+date: 2025-07-04
 status: active
 publisher:
   ## Find your domain contact on the https://www.ihe.net/ihe_domains page
@@ -35,10 +35,10 @@ dependencies:
     id: crmi
     version: 1.0.0
     reason: This IG uses content management profiles and capabilities provided by the Canonical Resource Management Infrastructure (CRMI) IG
- hl7.terminology: 5.5.0
- hl7.fhir.uv.extensions.r4: 
+  hl7.terminology: 5.5.0
+  hl7.fhir.uv.extensions.r4: 
     id: ext
-    version: 5.1.0
+    version: 5.2.0
     reason: Making this dependency more explicit
 
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
