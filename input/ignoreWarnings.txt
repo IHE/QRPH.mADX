@@ -3,6 +3,9 @@
 # Build errors related to "versionAlgorithm" valueSet. This valueSet is defined in R5. An issue is active on HL7 Jira: https://jira.hl7.org/browse/FHIR-49823
 The reference http://hl7.org/fhir/ValueSet/version-algorithm could not be resolved
 
+# The latest terminology version is based on FHIR R5 while this IG was on purpose built on FHIR R4 (including the terminology version linked to FHIR R4). The latest terminology version is not appropriate for this IG.
+The ImplementationGuide uses package hl7.terminology#5.5.0 released on 2024-03-09, but the most recent appropriate version is 6.5.0. This reference is getting old and the more recent version should be considered
+
 # IHE valuesets/resources that are not real valuesets/resources (those were used only for demonstration purposes)
 No definition could be found for URL value 'http://ohie.org/Measure/'
 A definition for CodeSystem 'http://ihe.net/qrph/madx/' could not be found, so the code cannot be validated
@@ -19,9 +22,7 @@ No definition could be found for URL value 'http://ohie.org/CodeSystem/iso-8601-
 A measure group stratifier should have a code when there is more than one population
 
 # HAPI FHIR errors related to the FHIR Measure. A Github issue is active on this subject: https://github.com/hapifhir/org.hl7.fhir.core/issues/1927
-Group should have a code that matches the group population definition in the measure
 Group should have a code that matches the group stratifier definition in the measure
-The MeasureReport does not include a group for the group ''
 The MeasureReport does not include a stratifier for the stratifier with code '' (id = 'group-stratifier1-id')
 The MeasureReport does not include a stratifier for the stratifier with code '' (id = 'group-stratifier2-id')
 
