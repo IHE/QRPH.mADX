@@ -35,7 +35,7 @@ dependencies:
     id: crmi
     version: 1.0.0
     reason: This IG uses content management profiles and capabilities provided by the Canonical Resource Management Infrastructure (CRMI) IG
-  hl7.terminology: 5.5.0
+  hl7.terminology.r4: 6.5.0
   hl7.fhir.uv.extensions.r4: 
     id: ext
     version: 5.2.0
@@ -58,7 +58,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   apply-jurisdiction: 'true'
   apply-publisher: 'true'
   apply-version: 'true'
-  pin-canonicals: pin-multiple
+  pin-canonicals: pin-multiples
 
 #resources:
 # list every example here with a name, description and that exampleBoolean is true; These are used to populate the artifacts page, and are needed to eliminate build warnings 
