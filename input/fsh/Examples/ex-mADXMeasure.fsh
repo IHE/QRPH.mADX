@@ -20,7 +20,7 @@ Usage: #example
 * subjectCodeableConcept = $resource-types#Location
 * date = "2024-08-02"
 * relatedArtifact[0].label = "ageGroup"
-* relatedArtifact[0].url = "http://ohie.org/CodeSystem/iso-8601-derived-periods"
+* relatedArtifact[0].url = Canonical(ISO8601DerivedPeriods)
 * relatedArtifact[0].type = #depends-on
 * relatedArtifact[1].label = "gender"
 * relatedArtifact[1].url = "http://hl7.org/fhir/administrative-gender"
