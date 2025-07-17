@@ -9,9 +9,7 @@ The ImplementationGuide uses package hl7.terminology#5.5.0 released on 2024-03-0
 # IHE valuesets/resources that are not real valuesets/resources (those were used only for demonstration purposes)
 No definition could be found for URL value 'http://ohie.org/Measure/'
 A definition for CodeSystem 'http://ihe.net/qrph/madx/' could not be found, so the code cannot be validated
-No definition could be found for URL value 'http://ihe.net/qrph/madx/'
 A definition for CodeSystem 'http://ihe.net/qrph/madx/hiv-stratifiers-example' could not be found, so the code cannot be validated
-No definition could be found for URL value 'http://ihe.net/qrph/madx/hiv-stratifiers-example'
 The resource Measure/madx-hiv-indicator-example could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 A definition for CodeSystem 'http://ihe.net/qrph/madx/TBdiagnosisResult-stratifiers-example' could not be found, so the code cannot be validated
 No definition could be found for URL value 'http://ihe.net/qrph/madx/TBdiagnosisResult-stratifiers-example'
@@ -28,3 +26,9 @@ The MeasureReport does not include a stratifier for the stratifier with code '' 
 
 # Info message related to a deprecated extension. Zulip issue created: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/elementdefinition-maxValueSet.7C5.2E2.2E0.20is.20deprecated
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+
+# Suppressing info messages triggered by the new functionality in the IG publisher related to pinning the version of a dependency. 
+Pinned the version of http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability to 5.2.0 from choices of 1.0.0 (hl7.fhir.uv.extensions.r4#1.0.0), 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
+Pinned the version of http://hl7.org/fhir/StructureDefinition/cqf-artifactComment to 5.2.0 from choices of 1.0.0 (hl7.fhir.uv.extensions.r4#1.0.0), 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
+Pinned the version of http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm to 5.2.0 from choices of 1.0.0 (hl7.fhir.uv.extensions.r4#1.0.0), 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
+Pinned the version of http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy to 5.2.0 from choices of 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
