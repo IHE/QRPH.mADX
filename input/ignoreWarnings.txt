@@ -29,4 +29,4 @@ Pinned the version of http://hl7.org/fhir/StructureDefinition/artifact-versionAl
 Pinned the version of http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy to 5.2.0 from choices of 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
 
 # Info message related to a locally defined CodeSystem for periods of time. This can be used until a proper Code System is defined in the future (ex: https://jira.hl7.org/browse/FHIR-50730).
-Reference to experimental CodeSystem https://profiles.ihe.net/QRPH/mADX/CodeSystem/ISO8601DerivedPeriods|3.0.0 (from https://tx.fhir.org/r4)
+Reference to experimental CodeSystem https://profiles.ihe.net/QRPH/mADX/CodeSystem/ISO8601DerivedPeriods|3.0.0
