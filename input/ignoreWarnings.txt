@@ -3,9 +3,6 @@
 # Build errors related to "versionAlgorithm" valueSet. This valueSet is defined in R5. An issue is active on HL7 Jira: https://jira.hl7.org/browse/FHIR-49823
 The reference http://hl7.org/fhir/ValueSet/version-algorithm could not be resolved
 
-# The latest terminology version is based on FHIR R5 while this IG was on purpose built on FHIR R4 (including the terminology version linked to FHIR R4). The latest terminology version is not appropriate for this IG.
-The ImplementationGuide uses package hl7.terminology#5.5.0 released on 2024-03-09, but the most recent appropriate version is 6.5.0. This reference is getting old and the more recent version should be considered
-
 # IHE valuesets/resources that are not real valuesets/resources (those were used only for demonstration purposes)
 No definition could be found for URL value 'http://ohie.org/Measure/'
 A definition for CodeSystem 'http://ihe.net/qrph/madx/' could not be found, so the code cannot be validated
@@ -13,8 +10,6 @@ A definition for CodeSystem 'http://ihe.net/qrph/madx/hiv-stratifiers-example' c
 The resource Measure/madx-hiv-indicator-example could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 A definition for CodeSystem 'http://ihe.net/qrph/madx/TBdiagnosisResult-stratifiers-example' could not be found, so the code cannot be validated
 No definition could be found for URL value 'http://ihe.net/qrph/madx/TBdiagnosisResult-stratifiers-example'
-A definition for CodeSystem 'http://ohie.org/CodeSystem/iso-8601-derived-periods' could not be found, so the code cannot be validated
-No definition could be found for URL value 'http://ohie.org/CodeSystem/iso-8601-derived-periods'
 
 # Known warrning message related to FHIR Measure validation. An issue is active on HL7 Jira: https://jira.hl7.org/browse/FHIR-49884
 A measure group stratifier should have a code when there is more than one population
@@ -32,3 +27,6 @@ Pinned the version of http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapab
 Pinned the version of http://hl7.org/fhir/StructureDefinition/cqf-artifactComment to 5.2.0 from choices of 1.0.0 (hl7.fhir.uv.extensions.r4#1.0.0), 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
 Pinned the version of http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm to 5.2.0 from choices of 1.0.0 (hl7.fhir.uv.extensions.r4#1.0.0), 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
 Pinned the version of http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy to 5.2.0 from choices of 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
+
+# Info message related to a locally defined CodeSystem for periods of time. This can be used until a proper Code System is defined in the future (ex: https://jira.hl7.org/browse/FHIR-50730).
+Reference to experimental CodeSystem https://profiles.ihe.net/QRPH/mADX/CodeSystem/ISO8601DerivedPeriods|3.0.0 (from https://tx.fhir.org/r4)
