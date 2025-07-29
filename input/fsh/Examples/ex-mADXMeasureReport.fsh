@@ -2,7 +2,7 @@ Alias: $madx = http://ihe.net/qrph/madx/
 Alias: $measure-population = http://terminology.hl7.org/CodeSystem/measure-population
 Alias: $hiv-stratifiers-example = http://ihe.net/qrph/madx/hiv-stratifiers-example
 Alias: $administrative-gender = http://hl7.org/fhir/administrative-gender
-Alias: $ageGroup = http://ohie.org/CodeSystem/iso-8601-derived-periods
+Alias: $ageGroup = https://profiles.ihe.net/QRPH/mADX/CodeSystem/ISO8601DerivedPeriods
 Alias: $TBdiagnosisResult-stratifiers-example = http://ihe.net/qrph/madx/TBdiagnosisResult-stratifiers-example
 
 Instance: mADX-MeasureReport-example

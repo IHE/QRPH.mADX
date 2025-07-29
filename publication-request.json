@@ -1,11 +1,11 @@
 {
     "package-id": "ihe.qrph.madx",
-    "version": "3.0.0-comment",
-    "path": "https://profiles.ihe.net/QRPH/mADX/3.0.0-comment",
+    "version": "3.0.0",
+    "path": "https://profiles.ihe.net/QRPH/mADX/3.0.0",
     "mode": "milestone",
-    "status": "ballot",
+    "status": "trial-use",
     "sequence": "Publication",
-    "desc": "Public comment",
+    "desc": "Trial-Implementation",
     "descmd": "### Significant Changes from Revision 2.1 (2021-10-26)
 
 - Converted the profile to IG format from PDF
@@ -13,16 +13,11 @@
 - Aligned in the specifications the message names of both transactions, to ensure consistency in naming.
 - Message semantics changes:
 	- **MeasureReport**:
-		- Deletions: ~~period~~
-		- Additions: `improvementNotation`, `group.population.code`, `group.population.count`, `group.stratifier.code`, `group.stratifier.stratum.measureScore`
+		- Deletions: `period`
+		- Additions: `improvementNotation`, `group.population.code`, `group.population.count`, `group.stratifier.stratum.measureScore`
+		- Updates: `subject`- updated the functional definition. The old definition suggested that the subject is always a `Location`.
 	- **Measure**:
-		- Deletions: ~~group.stratifier.component~~
-		- Additions: `improvementNotation`, `group.population.code`, `group.stratifier.code`
+		- Additions: `improvementNotation`, `group.population.code`
 ",
-    "changes": "issues.html",
-    "title": "Mobile Aggregate Data Exchange",
-    "ci-build": "https://build.fhir.org/ig/IHE/QRPH.mADX/branches/master/index.html",
-    "category": "Public Health Reporting",
-    "introduction": "The Mobile Aggregate Data Exchange (mADX) Profile supports interoperable public health reporting of aggregate health data. These most typically take the form of routine reports (weekly, monthly, quarterly etc.) from a health facility to some administrative jurisdiction such as a health district, though there are numerous other use cases such as international reporting and community health worker reporting.",
-    "first": true
+    "changes": "issues.html"
 }
