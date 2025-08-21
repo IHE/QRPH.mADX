@@ -4,24 +4,29 @@
 The reference http://hl7.org/fhir/ValueSet/version-algorithm could not be resolved
 
 # IHE valuesets/resources that are not real valuesets/resources (those were used only for demonstration purposes)
+No definition could be found for URL value 'http://ohie.org/Measure/'
 A definition for CodeSystem 'http://ihe.net/qrph/madx/' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://ihe.net/qrph/madx/hiv-stratifiers-example' could not be found, so the code cannot be validated
 The resource Measure/madx-hiv-indicator-example could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 A definition for CodeSystem 'http://ihe.net/qrph/madx/TBdiagnosisResult-stratifiers-example' could not be found, so the code cannot be validated
-A definition for CodeSystem 'http://ohie.org/CodeSystem/iso-8601-derived-periods' could not be found, so the code cannot be validated
+No definition could be found for URL value 'http://ihe.net/qrph/madx/TBdiagnosisResult-stratifiers-example'
 
 # Known warrning message related to FHIR Measure validation. An issue is active on HL7 Jira: https://jira.hl7.org/browse/FHIR-49884
 A measure group stratifier should have a code when there is more than one population
 
 # HAPI FHIR errors related to the FHIR Measure. A Github issue is active on this subject: https://github.com/hapifhir/org.hl7.fhir.core/issues/1927
-Group should have a code that matches the group population definition in the measure
-The MeasureReport does not include a group for the group ''
+Group should have a code that matches the group stratifier definition in the measure
+The MeasureReport does not include a stratifier for the stratifier with code '' (id = 'group-stratifier1-id')
+The MeasureReport does not include a stratifier for the stratifier with code '' (id = 'group-stratifier2-id')
 
 # Info message related to a deprecated extension. Zulip issue created: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/elementdefinition-maxValueSet.7C5.2E2.2E0.20is.20deprecated
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 
-# do not want version specific
-WARNING: StructureDefinition/mADX-Measure: StructureDefinition.snapshot.element[8].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '5.2.0', found versions: 1.0.0, 5.1.0, 5.2.0. Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability' to 'http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability|5.2.0'
-WARNING: StructureDefinition/mADX-Measure: StructureDefinition.snapshot.element[9].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/cqf-artifactComment'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '5.2.0', found versions: 1.0.0, 5.1.0, 5.2.0. Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/cqf-artifactComment' to 'http://hl7.org/fhir/StructureDefinition/cqf-artifactComment|5.2.0'
-WARNING: StructureDefinition/mADX-Measure: StructureDefinition.snapshot.element[10].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '5.2.0', found versions: 1.0.0, 5.1.0, 5.2.0. Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm' to 'http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm|5.2.0'
-WARNING: StructureDefinition/mADX-Measure: StructureDefinition.snapshot.element[11].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '5.2.0', found versions: 5.1.0, 5.2.0. Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy' to 'http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy|5.2.0'
+# Suppressing info messages triggered by the new functionality in the IG publisher related to pinning the version of a dependency. 
+Pinned the version of http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability to 5.2.0 from choices of 1.0.0 (hl7.fhir.uv.extensions.r4#1.0.0), 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
+Pinned the version of http://hl7.org/fhir/StructureDefinition/cqf-artifactComment to 5.2.0 from choices of 1.0.0 (hl7.fhir.uv.extensions.r4#1.0.0), 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
+Pinned the version of http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm to 5.2.0 from choices of 1.0.0 (hl7.fhir.uv.extensions.r4#1.0.0), 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
+Pinned the version of http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy to 5.2.0 from choices of 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
+
+# Info message related to a locally defined CodeSystem for periods of time. This can be used until a proper Code System is defined in the future (ex: https://jira.hl7.org/browse/FHIR-50730).
+Reference to experimental CodeSystem https://profiles.ihe.net/QRPH/mADX/CodeSystem/ISO8601DerivedPeriods|3.0.0

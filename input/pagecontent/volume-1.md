@@ -76,11 +76,11 @@ A Content Data Structure Consumer consumes a Measure resource produced by a Cont
 
 <a name="ContentCreator"> </a>
 #### 1:6.1.1.3  Content Creator
-A Content Creator **SHALL** be able to generate an HL7 FHIR Measure that is conformant to mADX and can transmit an mADX message to the Content Consumer. A Content Creator, under the Validate mADX Message Option, shall be grouped with a Care Services Update Consumer and a Content Data Structure Consumer.
+A Content Creator **SHALL** be able to generate an HL7 FHIR MeasureReport that is conformant to mADX and can transmit an mADX message to the Content Consumer. A Content Creator, under the Validate mADX Message Option, shall be grouped with a Care Services Update Consumer and a Content Data Structure Consumer.
 
 <a name="ContentConsumer"> </a>
 #### 1:6.1.1.4  Content Consumer
-A Content Consumer **SHALL** be able to process a data stream that is conformant to the format defined by the Measure resource produced by the Content Data Structure Creator. What it means to process the XML stream depends on the nature of the processor. For example it might persist the individual data tuples, or it might format them for display or perform further aggregation on the data. A Content Consumer, under the Validate mADX Message Option, **SHALL** be grouped with a Care Services Update Consumer and a Content Data Structure Consumer.
+A Content Consumer **SHALL** be able to process a data stream, received in the form of a HL7 FHIR MeasureReport, that is conformant to the format defined by the Measure resource produced by the Content Data Structure Creator. What it means to process the data stream depends on the nature of the processor. For example it might persist the individual data tuples, or it might format them for display or perform further aggregation on the data. A Content Consumer, under the Validate mADX Message Option, **SHALL** be grouped with a Care Services Update Consumer and a Content Data Structure Consumer.
 
 <a name="CareServicesUpdateSupplier"> </a>
 #### 1:6.1.1.5  Care Services Update Supplier
