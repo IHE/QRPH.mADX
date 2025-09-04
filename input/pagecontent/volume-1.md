@@ -16,7 +16,7 @@ This section defines the actors, transactions, and/or content modules in this im
 
 Table 1:6.1-1 lists the transactions for each actor directly involved in the mADX Profile. To claim compliance with this profile, an actor **SHALL** support all required transactions (labeled “R”) and **MAY** support the optional transactions (labeled “O”).
 
-<p id ="t1:6.1-1" class="tableTitle">**Table 1:6.1-1: mADX Profile - Actors and Transactions**</p>
+<p id ="t1:6.1-1" class="tableTitle"><strong>Table 1:6.1-1: mADX Profile - Actors and Transactions</strong></p>
 
 | Actors  | Transactions    | Initiator or Responder | Optionality  | Reference            |
 |---------|-----------------|------------------------|--------------|----------------------|
@@ -28,7 +28,7 @@ Table 1:6.1-1 lists the transactions for each actor directly involved in the mAD
 
 Table 1:6.1-2 lists the content module(s) defined in the mADX Profile. To claim support for this profile, an actor shall support all required content modules (labeled “R”) and may support optional content modules (labeled “O”). 
 
-<p id ="t1:6.1-2" class="tableTitle">**Table 1:6.1-2: mADX Profile - Actors and Content Modules**</p>
+<p id ="t1:6.1-2" class="tableTitle"><strong>Table 1:6.1-2: mADX Profile - Actors and Content Modules</strong></p>
 
 |  Actors      | Content Modules                |Optionality                |  Reference                                 |
 |---------|-----------------|-----------------|-----------------------------------|
@@ -111,7 +111,7 @@ For more details see the detailed [transaction description](QRPH-59.html).
 ## 1:6.2 mADX Actor Options
 Options that may be selected for each actor in this implementation guide are listed in Table 1:6.2-1 below.
 
-<p id ="t1:6.2-1" class="tableTitle">**Table 1:6.2-1: mADX - Actor Options**</p>
+<p id ="t1:6.2-1" class="tableTitle"><strong>Table 1:6.2-1: mADX - Actor Options</strong></p>
 
 | Actor                           | Option Name           | Reference            |
 |---------------------------------|-----------------------|----------------------|
@@ -132,7 +132,7 @@ The Content Creator or Content Consumer Actors **SHALL** be grouped with the Con
 
 There are no Required Actor Groupings defined except in the Validate mADX Message Option where the Content Creator or Content Consumer Actors, **SHALL** be grouped with the Content Data Structure Consumer, the SVCM Terminology Consumer and the mCSD Care Services Update Consumer as indicated in Section 1:6.2.1.
 
-<p id ="t1:6.3-1" class="tableTitle">**Table 1:6.3-1: Actor Groupings**</p>
+<p id ="t1:6.3-1" class="tableTitle"><strong>Table 1:6.3-1: Actor Groupings</strong></p>
 
 | mADX Actor              | Actor to be Grouped With                                          | Reference       | Content Bindings Reference |
 | ----------------------- | ----------------------------------------------------------------- | --------------- | -------------------------- |
