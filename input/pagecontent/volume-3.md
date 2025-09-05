@@ -46,7 +46,7 @@ NA
 NA
 # 3:8 mADX Content Modules
 
-This section defines Content Modules for the mobile Aggregate Data Exchange (mADX) Profile.
+This section defines Content Modules for the Mobile Aggregate Data Exchange (mADX) Profile.
 
 ## 3:8.1 Overview of mADX process
 A Content Data Structure Creator creates mADX-conformant Measure and schema streams. Typically, the mADX Content Data Structure Creator will be an implementing jurisdiction such as a ministry of health, a global non-government organization (NGO), or a donor.
@@ -57,7 +57,7 @@ A Content Data Structure Creator creates mADX-conformant Measure and schema stre
 
 Content Creators and Content Consumers exchange a data payload that conforms to the mADX compliant resources. A sample mADX compliant data payload is provided in the informative Appendix 8C.
 
-Additional (informative) message constraints for interoperability of mADX data exchange which are outside of the scope of this profile are described in Section 3:8.4.
+Additional (informative) message constraints for interoperability of mADX data exchange which are outside of the scope of this profile are described in Section 3:8.3.
 
 <a name="section-8.2"> </a>
 

@@ -12,23 +12,23 @@ The mADX Profile contains few constraints regarding the nature and source of cod
 
 ## 1:6.1 mADX Actors, Transactions, and Content Modules
 
-This section defines the actors, transactions, and/or content modules in this implementation guide. General definitions of actors are given in the Technical Frameworks General Introduction Appendix A at http://ihe.net/Technical_Frameworks.
+This section defines the actors, transactions, and/or content modules in this implementation guide. Further information about actor and transaction definitions can be found in the IHE Technical Frameworks General Introduction [Appendix A: Actors](https://profiles.ihe.net/GeneralIntro/ch-A.html) and [Appendix B: Transactions](https://profiles.ihe.net/GeneralIntro/ch-B.html).
 
-Table 1:6.1-1 lists the transactions for each actor directly involved in the mADX Profile. To claim compliance with this profile, an actor shall support all required transactions (labeled “R”) and may support the optional transactions (labeled “O”).
+Table 1:6.1-1 lists the transactions for each actor directly involved in the mADX Profile. To claim compliance with this profile, an actor **SHALL** support all required transactions (labeled “R”) and **MAY** support the optional transactions (labeled “O”).
 
-<p id ="t1:6.1-1" class="tableTitle">Table 1:6.1-1: mADX Profile - Actors and Transactions</p>
+<p id ="t1:6.1-1" class="tableTitle"><strong>Table 1:6.1-1: mADX Profile - Actors and Transactions</strong></p>
 
 | Actors  | Transactions    | Initiator or Responder | Optionality  | Reference            |
 |---------|-----------------|------------------------|--------------|----------------------|
-| Content Creator | Send Aggregate Report [QRPH-58] | Initiator |R| QRPH TF-2: 3.58 |   
-| Content Consumer | Send Aggregate Report [QRPH-58] | Responder |R| QRPH TF-2: 3.58 |  
-| Content Data Structure Consumer | Retrieve Aggregate Report Definition [QRPH-59] | Initiator |R| QRPH TF-2: 3.59 |   
-| Content Data Structure Creator | Retrieve Aggregate Report Definition [QRPH-59] | Responder |R| QRPH TF-2: 3.59|  
+| Content Creator | Send Aggregate Report [QRPH-58] | Initiator |R| [QRPH TF-2: 3.58](QRPH-58.html) |   
+| Content Consumer | Send Aggregate Report [QRPH-58] | Responder |R| [QRPH TF-2: 3.58](QRPH-58.html) |  
+| Content Data Structure Consumer | Retrieve Aggregate Report Definition [QRPH-59] | Initiator |R| [QRPH TF-2: 3.59](QRPH-59.html) |   
+| Content Data Structure Creator | Retrieve Aggregate Report Definition [QRPH-59] | Responder |R| [QRPH TF-2: 3.59](QRPH-59.html)|  
 {: .grid .table-striped}
 
 Table 1:6.1-2 lists the content module(s) defined in the mADX Profile. To claim support for this profile, an actor shall support all required content modules (labeled “R”) and may support optional content modules (labeled “O”). 
 
-<p id ="t1:6.1-2" class="tableTitle">Table 1:6.1-2: mADX Profile - Actors and Content Modules</p>
+<p id ="t1:6.1-2" class="tableTitle"><strong>Table 1:6.1-2: mADX Profile - Actors and Content Modules</strong></p>
 
 |  Actors      | Content Modules                |Optionality                |  Reference                                 |
 |---------|-----------------|-----------------|-----------------------------------|
@@ -55,8 +55,8 @@ Table 1:6.1-2 lists the content module(s) defined in the mADX Profile. To claim 
   - [Care Services Update Supplier](#CareServicesUpdateSupplier)
   - [Care Services Update Consumer](#CareServicesUpdateConsumer)
 - Transactions
-  - [mADX QRPH-58](QRPH-58.html)
-  - [mADX QRPH-59](QRPH-59.html)
+  - [Send Aggregate Report [mADX QRPH-58]](QRPH-58.html)
+  - [Retrieve Aggregate Report Definition [QRPH-59]](QRPH-59.html)
 
 ### 1:6.1.1 Actor Descriptions and Actor Profile Requirements
 The actors in this profile are described in more detail in the sections below.
@@ -71,7 +71,7 @@ A Content Data Structure Creator shall create a normative mADX HL7 FHIR Measure 
 <a name="ContentDataStructureConsumer"> </a>
 #### 1:6.1.1.2 Content Data Structure Consumer
 A Content Data Structure Consumer consumes a Measure resource produced by a Content Data Structure Creator. The system implementing this actor role will often be a Content Creator, though this grouping is optional. The Measure resource can be used to configure the Content Creator to produce valid content.
-- The Content Data Structure Consumer SHALL retrieve a Measure resource by executing a Retrieve Aggregate Report Definition [QRPH-59] as defined in this profile.
+- The Content Data Structure Consumer SHALL retrieve a Measure resource by executing a [Retrieve Aggregate Report Definition [QRPH-59]](QRPH-59.html) as defined in this profile.
 - The Content Creator or the Content Consumer may act as a Content Data Structure Consumer, view [1:6.3 Required Actor Groupings](#required-groupings).
 
 <a name="ContentCreator"> </a>
@@ -80,7 +80,7 @@ A Content Creator **SHALL** be able to generate an HL7 FHIR MeasureReport that i
 
 <a name="ContentConsumer"> </a>
 #### 1:6.1.1.4  Content Consumer
-A Content Consumer **SHALL** be able to process a data stream, received in the form of a HL7 FHIR MeasureReport, that is conformant to the format defined by the Measure resource produced by the Content Data Structure Creator. What it means to process the data stream depends on the nature of the processor. For example it might persist the individual data tuples, or it might format them for display or perform further aggregation on the data. A Content Consumer, under the Validate mADX Message Option, **SHALL** be grouped with a Care Services Update Consumer and a Content Data Structure Consumer.
+A Content Consumer **SHALL** be able to process a data stream, received in the form of a HL7 FHIR MeasureReport, that is conformant to the format defined by the Measure resource produced by the Content Data Structure Creator. What it means to process the data stream depends on the nature of the processor. For example, it might persist the individual data tuples, or it might format them for display or perform further aggregation on the data. A Content Consumer, under the Validate mADX Message Option, **SHALL** be grouped with a Care Services Update Consumer and a Content Data Structure Consumer.
 
 <a name="CareServicesUpdateSupplier"> </a>
 #### 1:6.1.1.5  Care Services Update Supplier
@@ -109,9 +109,9 @@ For more details see the detailed [transaction description](QRPH-59.html).
 <a name="actor-options"> </a>
 
 ## 1:6.2 mADX Actor Options
-Options that may be selected for each actor in this implementation guide, are listed in Table 1:6.2-1 below.
+Options that may be selected for each actor in this implementation guide are listed in Table 1:6.2-1 below.
 
-<p id ="t1:6.2-1" class="tableTitle">Table 1:6.2-1: mADX - Actor Options</p>
+<p id ="t1:6.2-1" class="tableTitle"><strong>Table 1:6.2-1: mADX - Actor Options</strong></p>
 
 | Actor                           | Option Name           | Reference            |
 |---------------------------------|-----------------------|----------------------|
@@ -124,7 +124,7 @@ Options that may be selected for each actor in this implementation guide, are li
 
 ### 1:6.2.1 Validate mADX Message Option
 
-The Content Creator or Content Consumer Actors, **SHALL** be grouped with the Content Data Structure Consumer, the SVCM Terminology Consumer and the mCSD Care Services Updates Consumer if the Validate mADX Message Option is used, which includes the Retrieve Aggregate Report Definition [QRPH-59] transaction.
+The Content Creator or Content Consumer Actors **SHALL** be grouped with the Content Data Structure Consumer, the SVCM Terminology Consumer, and the mCSD Care Services Updates Consumer if the Validate mADX Message Option is used, which includes the Retrieve Aggregate Report Definition [QRPH-59] transaction.
 
 <a name="required-groupings"> </a>
 
@@ -132,7 +132,7 @@ The Content Creator or Content Consumer Actors, **SHALL** be grouped with the Co
 
 There are no Required Actor Groupings defined except in the Validate mADX Message Option where the Content Creator or Content Consumer Actors, **SHALL** be grouped with the Content Data Structure Consumer, the SVCM Terminology Consumer and the mCSD Care Services Update Consumer as indicated in Section 1:6.2.1.
 
-<p id ="t1:6.3-1" class="tableTitle">Table 1:6.3-1: Actor Groupings</p>
+<p id ="t1:6.3-1" class="tableTitle"><strong>Table 1:6.3-1: Actor Groupings</strong></p>
 
 | mADX Actor              | Actor to be Grouped With                                          | Reference       | Content Bindings Reference |
 | ----------------------- | ----------------------------------------------------------------- | --------------- | -------------------------- |
