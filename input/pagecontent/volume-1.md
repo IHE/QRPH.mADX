@@ -55,7 +55,7 @@ Table 1:6.1-2 lists the content module(s) defined in the mADX Profile. To claim 
   - [Care Services Update Supplier](#CareServicesUpdateSupplier)
   - [Care Services Update Consumer](#CareServicesUpdateConsumer)
 - Transactions
-  - [Send Aggregate Date Report [mADX QRPH-58]](QRPH-58.html)
+  - [Send Aggregate Report [mADX QRPH-58]](QRPH-58.html)
   - [Retrieve Aggregate Report Definition [QRPH-59]](QRPH-59.html)
 
 ### 1:6.1.1 Actor Descriptions and Actor Profile Requirements
