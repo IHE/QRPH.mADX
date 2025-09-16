@@ -37,7 +37,7 @@ mADX profiles HL7 FHIR Measure and MeasureReport resources. Additionally, this p
 
 This specification profiles HL7 FHIR to define an mADX Measure to normatively describe the structure of routine aggregate data reports as an mADX message. The mADX Profile uses the following actors:
 
-- the Content Creators and the Content Consumer for the creation and consumption of mADX messages
+- the Content Creator and the Content Consumer for the creation and consumption of mADX messages
 - the Content Data Structure Creator and the Content Data Structure Consumer, defined in the ADX Profile, which produce and consume the Measure resources respectively
 - the Care Services Update Supplier and the Care Services Update Consumer, defined in the mCSD Profile, for supplying and consuming location data
 - the Terminology Consumer defined in the SVCM Profile for querying and validating codes
@@ -70,7 +70,7 @@ See also the [Table of Contents](toc.html) and the index of [Artifacts](artifact
 
 ### Conformance Expectations
 
-IHE uses the normative words: “REQUIRED”, “REQUIRED NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” according to [standards conventions](https://profiles.ihe.net/GeneralIntro/ch-E.html).
+IHE uses the normative words: “REQUIRED”, “REQUIRED NOT”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” according to [standards conventions](https://profiles.ihe.net/GeneralIntro/ch-E.html).
 
 #### Required Support
 

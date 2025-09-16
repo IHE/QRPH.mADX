@@ -1,5 +1,5 @@
 
-This section corresponds to transaction [QRPH-59] of the IHE QRPH Technical Framework. Transaction [QRPH-59] is an optional transaction used by the Content Creator and Content Consumer actors to retrieve the defined FHIR Measure, in which case both shall be grouped with a Content Data Structure Consumer, under the Validate mADX Message Option. It can be exercised as an optional validation step by implementers. 
+This section corresponds to transaction [QRPH-59] of the IHE QRPH Technical Framework. Transaction [QRPH-59] is an optional transaction used by the Content Creator and Content Consumer Actors to retrieve the defined FHIR Measure, in which case both shall be grouped with a Content Data Structure Consumer, under the Validate mADX Message Option. It can be exercised as an optional validation step by implementers. 
 
 ### 2:3.59.1 Scope
 
@@ -36,7 +36,7 @@ The roles in this transaction are defined in the following table and may be play
 
 #### 2:3.59.4.1 Retrieve Aggregate Report Definition Request Message
 
-This transaction facilitates the Content Data Structure Consumer  requesting an mADX Measure from a Content Data Structure Creator. The Measure MAY be used by the Content Data Structure Consumer to validate their mADX messages upon receipt. 
+This transaction facilitates the Content Data Structure Consumer  requesting an mADX Measure from a Content Data Structure Creator. The Measure **MAY** be used by the Content Data Structure Consumer to validate their mADX messages upon receipt. 
 The Retrieve Aggregate Report Definition [QRPH-59] is implemented as a FHIR Read transaction defined in the RESTful API implementation guide: {{site.data.fhir.path}}http.html#read.
 
 
@@ -51,7 +51,7 @@ A Content Data Structure Consumer sends a Retrieve Aggregate Report Definition [
 |         |      Description    |
 |-------------|----------------|
 | URL | The mADX Profile does not prescribe the form of the URL to be advertised by a Content Data Structure Creator except that the scheme of the URL SHALL be “https”. |
-| Headers |The Read request SHALL contain a Content-type header identifying the payload <br> - Type:Content-type: application/ fhir+xml <br>- Type:Content-type: application/fhir+json <br> The request MAY contain any additional headers. For example, a Content Data Structure Creator may require an Authorization header.|
+| Headers |The Read request SHALL contain a Content-type header identifying the payload <br> - Type:Content-type: application/ fhir+xml <br>- Type:Content-type: application/fhir+json <br> The request may contain any additional headers. For example, a Content Data Structure Creator may require an Authorization header.|
 | BODY | The body of an mADX Retrieve Aggregate Report Definition request SHALL contain the ID of the resource. |
 {: .grid .table-striped}
 
@@ -64,7 +64,7 @@ This transaction responds to the Content Data Structure Consumer requesting an m
 
 The Retrieve Aggregate Report Definition [QRPH-59] is implemented as a FHIR Read transaction defined in the RESTful API implementation guide: {{site.data.fhir.path}}http.html#read.
 
-An example Measure is provided in the "Artifacts" page of this profile.
+An example Measure is provided in the [Artifacts](artifacts.html) page of this profile.
 
 ##### 2:3.59.4.2.1 Trigger Events
 
@@ -115,7 +115,7 @@ The HL7 FHIR Measure response **SHALL** contain the following additional element
 - `group[].stratifier[].component[]` There should be a “component” for each set of disaggregators which is linked to a FHIR value set.
 - `group[].stratifier[].component[].code` There should be a code used to reference this disaggregating value set. There must be a relatedArtifact (see above) for each disaggregation set which is a reference to a FHIR value set.
 
-The implementers **MUST SUPPORT** support the  element `improvementNotation` because is critical for indicating improvements for the measured values. However `improvementNotation`  is optional in the Measure response message.
+The implementers **MUST SUPPORT** the  element `improvementNotation` because is critical for indicating improvements for the measured values. However, `improvementNotation`  is optional in the Measure response message.
 
 ##### 2:3.59.4.2.3 Expected Actions
 

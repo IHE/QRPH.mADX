@@ -69,15 +69,15 @@ The indicator **SHALL** contain the following additional elements if the indicat
 - `group.stratifier.stratum` Indicates the stratum results.
 - `group.stratifier.stratum.measureScore` The value that is reported.
 - `group.stratifier.stratum.measureScore.value` The numeric value reported in the aggregate report.
-- `group.stratifier.stratum.component.code` Represents a disaggregation dimension for the disaggregation criterion reported
-- `group.stratifier.stratum.component.value` Represents a disaggregation value for the disaggregation dimension reported
+- `group.stratifier.stratum.component.code` Represents a disaggregation dimension for the disaggregation criterion reported.
+- `group.stratifier.stratum.component.value` Represents a disaggregation value for the disaggregation dimension reported.
 
 The implementers **MUST SUPPORT** support the  element `improvementNotation` because is critical for indicating improvements for the measured values. However `improvementNotation`  is optional in the MeasureReport response message.
 
 
 ##### 2:3.58.4.1.3 Expected Actions
 
-The Content Consumer **SHALL** process the mADX message received and return the status of the transaction as per section 2:3.58.4.2. .
+The Content Consumer **SHALL** process the mADX message received and return the status of the transaction as per section 2:3.58.4.2.
 
 ##### 2:3.58.4.1.4 Send Aggregate Report Bundle Message
 A Content Creator may submit multiple Measures using a Collection Bundle in FHIR in a single transaction. This option can be valuable in use cases where the system may not have constant connection. (See  [{{site.data.fhir.path}}bundle.html]({{site.data.fhir.path}}bundle.html).)
@@ -101,15 +101,15 @@ Note that a Content Creator should be prepared to handle additional status codes
 
 | HTTP status code | Interpretation |
 | ---- | ---- |
-| 200 | Send Aggregate Report request message was successfully processed |
+| 200 | Send Aggregate Report request message was successfully processed. |
 | 202 | Send Aggregate Report request message has been accepted for processing, but the processing has not been completed. The request might or might not be eventually acted upon, and may be disallowed when processing occurs. |
 | 303 | The response to the Send Aggregate Report request message, when the task is complete, can be retrieved from another URL. When received in response to a Send Aggregate Report request message, the client should presume that the server has received the data and should issue a redirect with a separate GET message. |
-| 400 | Bad Request - message content is badly formed or invalid |
-| 401 | Not authorized - authorization is required for the interaction that was attempted |
-| 404 | Not found - resource type is not supported |
-| 405 | Method not allowed - the resource did not exist prior to the update, and the server does not allow client defined ids |
+| 400 | Bad Request - message content is badly formed or invalid. |
+| 401 | Not authorized - authorization is required for the interaction that was attempted. |
+| 404 | Not found - resource type is not supported. |
+| 405 | Method not allowed - the resource did not exist prior to the update, and the server does not allow client defined ids. |
 | 409/412 | Conflict - invalid identifier in the message content. |
-| 415 | Unsupported content-type or media |
+| 415 | Unsupported content-type or media. |
 | 422 | Unprocessable entity - The MeasureReport does not adhere to mADX Profile on the required fields, etc. |
 | 501 | The request method is not implemented. |
 {: .grid .table-striped}
@@ -124,7 +124,7 @@ If no other error conditions are encountered, a Content Consumer **SHALL** respo
 An OperationOutcome resource **SHALL** be generated for each MeasureReport resource submitted in the batch transaction which violates the above business rule(s), in which case the OperationOutcome **SHALL**:
 - Use response codes as in Table 2:3.58.4.2.2-1 for the OperationOutcome.issue.code
 - Provide a FHIRPath identifying the invalid MeasureReport in OperationOutcome.issue.expression
-- Set the value of OperationOutcome.issue.expression to fatal.
+- Set the value of OperationOutcome.issue.expression to fatal
 
 ### 2:3.58.5 Protocol Requirements
 
