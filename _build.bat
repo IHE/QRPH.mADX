@@ -11,6 +11,7 @@ SET "build_bat_url=%scriptdlroot%/_build.bat"
 SET "build_sh_url=%scriptdlroot%/_build.sh"
 
 
+
 :: Debugging statements to check jar file location
 ECHO Checking for publisher.jar in %input_cache_path%
 IF EXIST "%input_cache_path%%publisher_jar%" (
@@ -88,7 +89,7 @@ echo ---------------------------------------------------------------
 echo.
 
 echo Please select an option:
-echo 1. Download or upload publisher
+echo 1. Download or update publisher
 echo 2. Build IG
 echo 3. Build IG - no sushi
 echo 4. Build IG - force no TX server
@@ -303,10 +304,6 @@ goto end
 start copy /y "_build.new.bat" "_build.bat" ^&^& del "_build.new.bat" ^&^& exit
 
 
-IF NOT "%skipPrompts%"=="true" (
-  PAUSE
-)
-
 GOTO end
 
 
@@ -380,3 +377,10 @@ GOTO end
 
 
 :end
+
+:: Pausing at the end
+
+
+IF NOT "%skipPrompts%"=="true" (
+  PAUSE
+)
